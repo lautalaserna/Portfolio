@@ -1,0 +1,11 @@
+.About {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+.About h4 {
+  width: 200px;
+}
