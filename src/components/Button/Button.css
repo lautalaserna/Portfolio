@@ -4,10 +4,10 @@ button {
   /* Variables */
   font-family: 'Poppins', sans-serif;
  --button_radius: 0.75em;
- --button_color: #f0f0f0;
+ --button_color: #ececec;
  --button_outline_color: #000000;
  padding: 0;
- font-size: calc(10px + 0.6vw);
+ font-size: calc(15px + 0.2vw);
  font-weight: bold;
  border: none;
  border-radius: var(--button_radius);
@@ -16,6 +16,7 @@ button {
 }
 
 .button_top {
+  user-select: none;
  display: block;
  box-sizing: border-box;
  border: 2px solid var(--button_outline_color);

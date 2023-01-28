@@ -1,0 +1,13 @@
+.Skills {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 100px;
+  background: #e2e2e2;
+}
+
+.Skills h4 {
+  color: #111;
+  width: 300px;
+}

@@ -12,7 +12,6 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   useEffect(() => {
     setTimeout(() => {
       if (pos < letters.length) {
-        console.log(pos)
         setName(name => name.concat(letters[pos]))
         setPos(p => p + 1)
       }
@@ -20,14 +19,14 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   }, [pos])
 
   return (
-    <section className="Welcome">
+    <section className="Welcome" id='home'>
       <div className="title-container">
-        <h1 className="title">Hi, I'm </h1>
+        <h1 className="title">Hi, I'm</h1>
         <span className="name">{name}</span>
         <div className={`stick ${pos == letters.length ? 'hidden' : ''}`}></div>
       </div>
       <h4 className="desc">I'm a software engineer and a full stack developer.</h4>
-      <Button />
+      <Button content="Contact me"/>
     </section>
   )
 }

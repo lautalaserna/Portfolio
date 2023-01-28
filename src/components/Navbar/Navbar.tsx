@@ -1,18 +1,24 @@
-import logoWhite from '@/assets/l-white-logo.png'
-import logoBlack from '@/assets/l-black-logo.png'
-import react from '@/assets/react.svg'
+import burgerClose from '@/assets/code-open.svg'
+import burgerOpen from '@/assets/code-close.svg'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-scroll'
 
 import './Navbar.css'
 
 export interface NavbarInterface {}
 
 const Navbar = () => {
-  const [active, setActive] = useState(false)
+  const [dark, setDark] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const handleScroll = (e: Event) => {
-    if (window.pageYOffset > 40) setActive(true)
-    else setActive(false)
+    if (window.pageYOffset > 40) setDark(true)
+    else setDark(false)
+  }
+
+  const handleClick = (offset: number) => {
+    document.body.scrollTop = offset
+    document.documentElement.scrollTop = offset
   }
 
   useEffect(() => {
@@ -21,30 +27,34 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('rezice', handleScroll)
     }
-  }, [window.pageYOffset])
+  })
 
   return (
-    <nav className={`Navbar ${active ? 'active' : ''}`}>
-      <div className="icon-section"></div>
-      <div className="links-section">
-        <a className={`${active ? 'active' : ''}`} href="/">
+    <nav className={`Navbar ${dark ? 'active' : ''} ${open ? 'open' : ''}`}>
+      <div className={`links-section ${open ? 'open' : ''}`}>
+        <Link className={`link-item ${dark ? 'active' : ''}`} to="home" smooth={true} offset={-100} duration={500}>
           Home
-        </a>
-        <a className={`${active ? 'active' : ''}`} href="/">
+        </Link>
+        <Link className={`link-item ${dark ? 'active' : ''}`} to="about" smooth={true} offset={-100} duration={500}>
           About
-        </a>
-        <a className={`${active ? 'active' : ''}`} href="/">
+        </Link>
+        <Link className={`link-item ${dark ? 'active' : ''}`} to="skills" smooth={true} offset={-100} duration={500}>
           Skills
-        </a>
-        <a className={`${active ? 'active' : ''}`} href="/">
+        </Link>
+        <Link className={`link-item ${dark ? 'active' : ''}`} to="home" smooth={true} offset={-100} duration={500}>
           Proyects
-        </a>
-        <a className={`${active ? 'active' : ''}`} href="/">
+        </Link>
+        <a className={`link-item ${dark ? 'active' : ''}`} href="/">
           Contact
         </a>
-        <div className="burguer">
-          <img src={react} alt="X" />
-        </div>
+      </div>
+      <div className="burguer">
+        <img
+          className={`logo ${dark ? 'active' : ''} ${open ? 'open' : ''}`}
+          src={open ? burgerOpen : burgerClose}
+          onClick={() => (open ? setOpen(false) : setOpen(true))}
+          alt=""
+        />
       </div>
     </nav>
   )

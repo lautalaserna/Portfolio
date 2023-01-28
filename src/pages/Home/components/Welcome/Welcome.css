@@ -1,7 +1,7 @@
 .Welcome {
   align-self: stretch;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ececec;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,25 +13,33 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 100px;
 }
 
 .title {
   margin: 0;
-  margin-right: 15px;
-  padding: 0;
+  margin-right: 10px;
   font-weight: 300;
-  font-size: calc(55px + 3vw);
-}
-
-.hidden {
-  display: none;
+  font-size: calc(50px + 3.2vw);
+  user-select: none;
 }
 
 .name {
-  font-size: calc(60px + 3vw);
+  font-size: calc(55px + 3.2vw);
   font-weight: 400;
   color: tomato;
+  user-select: none;
 } 
+
+.desc {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: calc(20px + 0.4vw);
+  font-weight: 300;
+  color: tomato;
+  user-select: none;
+}
 
 .stick{
   width: 4px;
@@ -39,10 +47,6 @@
   background-color: tomato;
 }
 
-.desc {
-  margin: 0;
-  margin-bottom: 100px;
-  font-size: calc(12px + 0.8vw);
-  font-weight: 200;
-  color: tomato;
+.hidden {
+  display: none;
 }

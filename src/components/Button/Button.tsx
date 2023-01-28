@@ -1,11 +1,13 @@
 import React from 'react'
 import './Button.css'
-export interface ButtonInterface {}
+export interface ButtonInterface {
+  content: string
+}
 
-const Button: React.FC<ButtonInterface> = () => {
+const Button = ({ content }: ButtonInterface) => {
   return (
     <button>
-      <span className="button_top"> Contact me</span>
+      <span className="button_top">{content}</span>
     </button>
   )
 }

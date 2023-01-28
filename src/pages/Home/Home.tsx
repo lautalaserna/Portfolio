@@ -1,4 +1,4 @@
-import { About, Welcome } from './components'
+import { About, Skills, Welcome } from './components'
 import './Home.css'
 
 export interface HomeInterface {}
@@ -8,6 +8,7 @@ const Home = () => {
     <div className="Home">
       <Welcome />
       <About />
+      <Skills/>
     </div>
   )
 }
