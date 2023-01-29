@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="Home">
       <Welcome />
-      <img className='divider' src={divider}/>
+      {/* <img className='divider' src={divider}/> */}
       <About />
       <Skills/>
     </div>

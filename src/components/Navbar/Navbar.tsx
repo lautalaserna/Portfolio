@@ -1,61 +1,111 @@
-import burgerClose from '@/assets/code-open.svg'
-import burgerOpen from '@/assets/code-close.svg'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
+import { Switch } from '@/components'
 import './Navbar.css'
 
 export interface NavbarInterface {}
 
 const Navbar = () => {
-  const [dark, setDark] = useState(false)
+  const [scroll, setScroll] = useState(false)
+  const [mobile, setMobile] = useState(false)
   const [open, setOpen] = useState(false)
 
   const handleScroll = (e: Event) => {
-    if (window.pageYOffset > 40) setDark(true)
-    else setDark(false)
+    if (window.pageYOffset > 40) {
+      setScroll(true)
+    } else {
+      setScroll(false)
+    }
   }
 
-  const handleClick = (offset: number) => {
-    document.body.scrollTop = offset
-    document.documentElement.scrollTop = offset
+  const handleResize = () => {
+    if (window.innerWidth < 900) {
+      setScroll(true)
+      setMobile(true)
+    } else {
+      setMobile(false)
+			setOpen(false)
+      if (window.pageYOffset == 0) setScroll(false)
+    }
   }
 
   useEffect(() => {
+    handleResize()
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('rezice', handleScroll)
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
   })
 
   return (
-    <nav className={`Navbar ${dark ? 'active' : ''} ${open ? 'open' : ''}`}>
-      <div className={`links-section ${open ? 'open' : ''}`}>
-        <Link className={`link-item ${dark ? 'active' : ''}`} to="home" smooth={true} offset={-100} duration={500}>
-          Home
-        </Link>
-        <Link className={`link-item ${dark ? 'active' : ''}`} to="about" smooth={true} offset={-100} duration={500}>
-          About
-        </Link>
-        <Link className={`link-item ${dark ? 'active' : ''}`} to="skills" smooth={true} offset={-100} duration={500}>
-          Skills
-        </Link>
-        <Link className={`link-item ${dark ? 'active' : ''}`} to="home" smooth={true} offset={-100} duration={500}>
-          Proyects
-        </Link>
-        <a className={`link-item ${dark ? 'active' : ''}`} href="/">
-          Contact
-        </a>
-      </div>
-      <div className="burguer">
-        <img
-          className={`logo ${dark ? 'active' : ''} ${open ? 'open' : ''}`}
-          src={open ? burgerOpen : burgerClose}
-          onClick={() => (open ? setOpen(false) : setOpen(true))}
-          alt=""
-        />
-      </div>
+    <nav className={`Navbar ${scroll ? 'scroll' : ''} ${mobile ? 'mobile' : ''}`}>
+      <ul className={`nav-menu ${mobile ? 'mobile' : ''} ${open ? 'open' : ''} `}>
+        <li className="nav-item">
+          <Link
+            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            onClick={() => setOpen(false)}
+            to="home"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            onClick={() => setOpen(false)}
+            to="about"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            onClick={() => setOpen(false)}
+            to="skills"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Skills
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            onClick={() => setOpen(false)}
+            to="home"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Proyects
+          </Link>
+        </li>
+        <li className="nav-item">
+          <a className={`nav-link ${scroll ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
+          <Switch onClick={() => setOpen(open => !open)} darkMode={scroll}/>
+          <p className={`switch-text ${scroll ? 'scroll' : ''}`}>Menu</p>
+        </div>
+        <div className="nav-switch">
+          <Switch onClick={() => console.log('DARK MODE ACTIVADO')} darkMode={scroll}/>
+          <p className={`switch-text ${scroll ? 'scroll' : ''}`}>Dark Mode</p>
+        </div>
     </nav>
   )
 }

@@ -8,6 +8,6 @@
 }
 
 .Skills h4 {
-  color: #111;
+  color: var(--font-dark);
   width: 300px;
 }

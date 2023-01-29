@@ -3,29 +3,33 @@
 button {
   /* Variables */
   font-family: 'Poppins', sans-serif;
- --button_radius: 0.75em;
- --button_color: #ececec;
- --button_outline_color: #000000;
- padding: 0;
- font-size: calc(15px + 0.2vw);
- font-weight: bold;
- border: none;
- border-radius: var(--button_radius);
- background: var(--button_outline_color);
- cursor: pointer;
+  --button_radius: 0.75em;
+  padding: 0;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--background-dark);
+  cursor: pointer;
 }
 
 .button_top {
   user-select: none;
  display: block;
  box-sizing: border-box;
- border: 2px solid var(--button_outline_color);
+ border: 2px solid var(--background-dark);
  border-radius: var(--button_radius);
  padding: 0.8em 1.6em;
- background: var(--button_color);
- color: var(--button_outline_color);
+ background: var(--background-light);
+ color: var(--background-dark);
  transform: translateY(-0.5em);
  transition: transform 0.1s ease;
+}
+
+button.darkmode .button_top{
+  border-color: #eee;
+  background: #111;
+  color:#eee;
 }
 
 button:hover .button_top {
