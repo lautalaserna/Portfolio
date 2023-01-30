@@ -1,12 +1,12 @@
 .Welcome {
-  padding-left: 20px;
-  padding-right: 20px;
   align-self: stretch;
-  height: 100vh;
+  padding-top: 35vh;
+  padding-bottom: 10vh;
+  height: 55vh;
   background-color: var(--background-light);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -14,19 +14,23 @@
   background-color: var(--background-dark);
 }
 
+.text-container {
+  display: flex;
+  align-items: center;
+}
+
 .title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 100px;
 }
 
 .title {
   margin: 0;
-  margin-right: 20px;
+  margin-right: 15px;
   font-weight: 300;
-  font-size: calc(40px + 3.4vw);
+  font-size: calc(35px + 4vw);
   user-select: none;
 }
 
@@ -35,7 +39,7 @@
 }
 
 .name {
-  font-size: calc(45px + 3.4vw);
+  font-size: calc(40px + 4vw);
   font-weight: 400;
   color: var(--primary-color);
   user-select: none;
@@ -44,8 +48,7 @@
 .desc {
   text-align: center;
   margin: 0;
-  margin-bottom: 60px;
-  font-size: calc(15px + 0.6vw);
+  font-size: calc(12px + 0.8vw);
   font-weight: 300;
   color: var(--primary-color);
   user-select: none;
@@ -59,4 +62,10 @@
 
 .hidden {
   display: none;
+}
+
+.social-container {
+  padding-top: 15px;
+  display: flex;
+  gap: 10px;
 }

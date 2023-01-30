@@ -1,0 +1,13 @@
+.SocialIcon {
+  user-select: none;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.SocialIcon:hover {
+  transform: scale(1.1);
+}
+
+.SocialIcon.darkmode .icon{
+  filter: invert(100%) sepia(0%) saturate(100%);
+}

@@ -19,15 +19,15 @@ button.darkmode {
 
 .button_top {
   user-select: none;
- display: block;
- box-sizing: border-box;
- border: 2px solid var(--background-dark);
- border-radius: var(--button_radius);
- padding: 0.8em 1.6em;
- background: var(--background-light);
- color: var(--background-dark);
- transform: translateY(-0.5em);
- transition: transform 0.1s ease;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--background-dark);
+  border-radius: var(--button_radius);
+  padding: 0.8em 1.6em;
+  background: var(--background-light);
+  color: var(--background-dark);
+  transform: translateY(-0.5em);
+  transition: transform 0.1s ease;
 }
 
 button.darkmode .button_top{

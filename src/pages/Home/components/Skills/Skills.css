@@ -37,29 +37,3 @@
   justify-content: center;
   gap: 5vw;
 }
-
-.Card {
-  border: solid 3px var(--font-dark);
-  border-radius: 20px;
-  width: calc(280px + 3vw);
-  height: 450px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-title{  
-  justify-self: start;
-}
-
-.skills-container {
-  height: 400px;
-}
-
-.Card p {
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}

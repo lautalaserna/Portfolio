@@ -1,51 +1,65 @@
-import { Button } from '@/components'
+import { Card } from '@/components'
 import React from 'react'
 import './Skills.css'
+import html from '@/assets/html.png'
+import css from '@/assets/css.png'
+import js from '@/assets/js.png'
+import ts from '@/assets/ts.png'
+import react from '@/assets/react.png'
+import bootstrap from '@/assets/bootstrap.png'
+import python from '@/assets/python.png'
+import java from '@/assets/java.png'
+import c from '@/assets/c.png'
+import node from '@/assets/node.png'
+import express from '@/assets/express.png'
+import mysql from '@/assets/mysql.png'
+import postgre from '@/assets/postgre.png'
+import mongo from '@/assets/mongo.png'
+import git from '@/assets/git-logo.png'
+import github from '@/assets/github.png'
+import vscode from '@/assets/vscode.png'
 
 export interface SkillsInterface {}
+
+type SkillType = {
+  name: string
+  path: string
+}
+
+const frontEndSkills: SkillType[] = [
+  { name: 'HTML', path: html },
+  { name: 'CSS', path: css },
+  { name: 'JavaScript', path: js },
+  { name: 'TypeScript', path: ts },
+  { name: 'React', path: react },
+  { name: 'Bootstrap', path: bootstrap }
+]
+
+const backEndSkills: SkillType[] = [
+  { name: 'Python', path: python },
+  { name: 'Java', path: java },
+  { name: 'C', path: c },
+  { name: 'NodeJS', path: node },
+  { name: 'Express', path: express },
+]
+
+const toolsSkills: SkillType[] = [
+  { name: 'MySQL', path: mysql },
+  { name: 'PosrtgrSQL', path: postgre },
+  { name: 'MongoDB', path: mongo },
+  { name: 'GitHub', path: github },
+  { name: 'VS Code', path: vscode }
+]
 
 const Skills: React.FC<SkillsInterface> = () => {
   return (
     <section className="Skills" id="skills">
-      <h1 className="title">Professional Skills</h1>
-      <h4 className='skills-desc'>Here are some of my most used stacks</h4>
+      <h1 className="title">Skills</h1>
+      <h4 className="skills-desc">Here are some of my most used stacks</h4>
       <div className="cards-container">
-        <div className="Card">
-          <h1 className="card-title">Front End</h1>
-          <div className="skills-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores voluptates velit eius libero
-              aliquid dicta minima praesentium pariatur, aperiam aliquam provident consequuntur id sunt repellendus
-              laborum veritatis ut exercitationem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam enim
-              nostrum, quidem doloremque similique fuga libero quas adipisci repellat cum fugit et nihil sed, cumque
-              minima eveniet expedita laudantium? Incidunt.
-            </p>
-          </div>
-        </div>
-        <div className="Card">
-          <h1 className="card-title">Back End</h1>
-          <div className="skills-container">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, voluptate. Amet molestiae labore
-              inventore doloribus sunt, eligendi fugiat sint, consequuntur iusto voluptas praesentium est distinctio ex
-              nesciunt animi. Qui, odio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos adipisci
-              natus excepturi ipsa totam! Alias, velit inventore dicta quaerat adipisci quibusdam perferendis, itaque,
-              similique labore saepe error ullam beatae in.
-            </p>
-          </div>
-        </div>
-        <div className="Card">
-          <h1 className="card-title">Tools</h1>
-          <div className="skills-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A vitae, accusantium dolor incidunt, eveniet
-              voluptates minima assumenda aspernatur, ab fuga nihil sequi unde atque deserunt quisquam sint quos quasi.
-              Accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vel optio reiciendis, libero
-              ullam aut temporibus cupiditate numquam molestiae tempore totam iure rerum commodi repellat nesciunt
-              debitis! Enim, consequuntur deserunt.
-            </p>
-          </div>
-        </div>
+        <Card title="Front End" skillList={frontEndSkills} color='green' />
+        <Card title="Back End & Desktop" skillList={backEndSkills} color='pink'/>
+        <Card title="Database & Tools" skillList={toolsSkills} color='yellow'/>
       </div>
     </section>
   )

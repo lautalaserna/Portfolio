@@ -1,0 +1,93 @@
+.Card {
+  --card_radius: 0.75em;
+  border: solid 3px var(--font-dark);
+  border-radius: var(--card_radius);
+  border: none;
+  background: var(--font-dark);
+  cursor: pointer;
+  width: 350px;
+  height: 420px;
+  padding: 0;
+  border: none;
+  background: var(--font-dark);
+  cursor: pointer;
+  transform: translateX(0.3em);
+}
+
+.card-top {
+  user-select: none;
+  display: block;
+  border: 2px solid var(--background-dark);
+  border-radius: var(--card_radius);
+  background: var(--background-light);
+  color: var(--background-dark);
+  transform: translateY(-0.6em) translateX(-0.6em);
+  transition: transform 0.1s ease;
+  width: 350px;
+  height: 420px;
+  overflow: hidden;
+}
+
+.Card:hover .card-top {
+  transform: translateY(-1.2em) translateX(-0.6em);
+}
+
+.Card .title-container {
+  border-bottom: solid 3px #111;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.Card .title-container::before {
+  content: '';  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 350px;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: 200ms ease-in-out;
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.Card:hover .title-container::before {
+  transform: scaleX(1);
+}
+
+.Card:hover .title-container .card-title {
+  color: var(--font-light);
+  font-style: italic;
+}
+
+.Card .card-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.skills-container {
+  padding:30px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-auto-rows: minmax(50px, 100px);
+}
+
+.green {
+  background-color: #7bf770;
+}
+
+.pink {
+  background-color: #f396f3;
+}
+
+.yellow {
+  background-color: #fdf36b;
+}
