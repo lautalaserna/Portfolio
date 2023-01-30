@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-scroll'
-
+import moon from '@/assets/moon.png'
+import home from '@/assets/home.png'
 import { Switch } from '@/components'
 import './Navbar.css'
+import { ThemeContext } from '@/App'
 
 export interface NavbarInterface {}
 
@@ -10,6 +12,8 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false)
   const [mobile, setMobile] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const {darkMode, toggleDarkMode} = useContext(ThemeContext)
 
   const handleScroll = (e: Event) => {
     if (window.pageYOffset > 40) {
@@ -25,7 +29,7 @@ const Navbar = () => {
       setMobile(true)
     } else {
       setMobile(false)
-			setOpen(false)
+      setOpen(false)
       if (window.pageYOffset == 0) setScroll(false)
     }
   }
@@ -46,7 +50,7 @@ const Navbar = () => {
       <ul className={`nav-menu ${mobile ? 'mobile' : ''} ${open ? 'open' : ''} `}>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
             to="home"
             smooth={true}
@@ -58,7 +62,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
             to="about"
             smooth={true}
@@ -70,7 +74,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
             to="skills"
             smooth={true}
@@ -82,7 +86,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll ? 'scroll' : ''}`}
+            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
             to="home"
             smooth={true}
@@ -93,19 +97,17 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <a className={`nav-link ${scroll ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
+          <a className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
             Contact
           </a>
         </li>
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
-          <Switch onClick={() => setOpen(open => !open)} darkMode={scroll}/>
-          <p className={`switch-text ${scroll ? 'scroll' : ''}`}>Menu</p>
-        </div>
-        <div className="nav-switch">
-          <Switch onClick={() => console.log('DARK MODE ACTIVADO')} darkMode={scroll}/>
-          <p className={`switch-text ${scroll ? 'scroll' : ''}`}>Dark Mode</p>
-        </div>
+        <Switch onClick={() => setOpen(open => !open)} darkMode={darkMode || scroll} icon={home} />
+      </div>
+      <div className="nav-switch">
+        <Switch onClick={toggleDarkMode} darkMode={darkMode || scroll} icon={moon}/>
+      </div>
     </nav>
   )
 }

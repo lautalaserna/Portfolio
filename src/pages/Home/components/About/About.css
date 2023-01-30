@@ -1,52 +1,59 @@
 .About {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   align-self: stretch;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  padding-left: 180px;
-  padding-right: 180px;
-  padding-top: 60px;
+  flex-direction: column;
+  flex-wrap: wrap;
   background: var(--primary-color);
-  padding-top: 80px;
-  padding-bottom: 80px;
   border-top: solid 4px var(--font-dark);
   border-bottom: solid 4px var(--font-dark);
+  user-select: none;
 }
 
-.About .container {
+.about-container {
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  text-align: justify;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 15px;
+  margin: 30px;
 }
 
-.container-info {
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.About p {
+.text-container p {
+  margin: 0;
+  padding: 0;
   color: var(--font-light);
-  font-size: 18px;
+  font-size: calc(14px + 0.3vw);
   font-weight: 300;
 }
 
 .About .title {
   margin: 0;
+  padding: 0;
   font-size: 60px;  
   font-weight: 400;
   color: #eee;
 }
 
 .image {
-  width: calc(300px);
-  margin-right: 80px;
+  width: 300px;
+  margin: 30px;
 }
 
 .btn-container {
-  align-self: flex-end;
-  justify-self: flex-end;
+  margin-top: 30px;
+  align-self: center;
+  justify-self: flex-start;
 }

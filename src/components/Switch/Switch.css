@@ -7,7 +7,7 @@
  --track_color: #e8e8e8;
  --track_active_color: #e8e8e8;
  --outline_color: #111;
- font-size: 20px;
+ font-size: 26px;
  position: relative;
  display: inline-block;
  width: var(--switch_width);
@@ -15,11 +15,15 @@
 }
 
 .switch.darkmode {
-  --thumb_color: #000;
-  --track_color: #000;
-  --track_active_color: #000;
-  --outline_color: #e8e8e8;
+  --thumb_color: #e8e8e8;
+  --track_color: #222;
+  --track_active_color: #222;
+  --outline_color: #000;
 }
+
+/* .switch.darkmode .icon {
+  filter: invert(100%) sepia(100%) saturate(100%);
+} */
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -81,4 +85,27 @@ input:checked + .slider:before {
 input:hover:checked + .slider:before {
  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
  box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+.icon-container {
+  position: relative;
+  transform: translateX(-4px) translateY(-10px);
+  transition: .15s;
+  user-select: none;
+}
+
+.icon {
+  width: 30px;
+}
+
+.switch:hover .icon-container{
+  transform: translateX(-4px) translateY(-12px)
+}
+
+input:checked + .slider .icon-container {
+  transform: translateX(22px) translateY(-10px);
+}
+
+input:hover:checked + .slider .icon-container {
+  transform: translateX(22px) translateY(-12px);
 }

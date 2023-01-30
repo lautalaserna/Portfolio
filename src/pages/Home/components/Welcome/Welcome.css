@@ -1,4 +1,6 @@
 .Welcome {
+  padding-left: 20px;
+  padding-right: 20px;
   align-self: stretch;
   height: 100vh;
   background-color: var(--background-light);
@@ -6,6 +8,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.Welcome.darkmode {
+  background-color: var(--background-dark);
 }
 
 .title-container {
@@ -20,12 +26,16 @@
   margin: 0;
   margin-right: 20px;
   font-weight: 300;
-  font-size: calc(50px + 3.2vw);
+  font-size: calc(40px + 3.4vw);
   user-select: none;
 }
 
+.Welcome.darkmode .title {
+  color: var(--font-light);
+}
+
 .name {
-  font-size: calc(55px + 3.2vw);
+  font-size: calc(45px + 3.4vw);
   font-weight: 400;
   color: var(--primary-color);
   user-select: none;
@@ -35,7 +45,7 @@
   text-align: center;
   margin: 0;
   margin-bottom: 60px;
-  font-size: calc(20px + 0.4vw);
+  font-size: calc(15px + 0.6vw);
   font-weight: 300;
   color: var(--primary-color);
   user-select: none;
