@@ -5,23 +5,41 @@
   align-items: center;
   justify-content: center;
   background: var(--background-light);
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 80px;
   user-select: none;
+}
+
+.Skills.darkmode {
+  background: var(--background-dark);
+}
+
+.Skills .skills-text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 10%;
 }
 
 .Skills .title {
   margin: 0;
   padding: 0;
   color: var(--font-dark);
-  font-size: 60px;  
+  font-size: calc(45px + 0.8vw);  
   font-weight: 400;
+  text-align: start;
 
+}
+
+.Skills.darkmode .title {
+  color: var(--font-light);  
 }
 
 .skills-desc {
   margin: 0;
-  color: var(--primary-color);
+  color: var(--color-two);
   font-size: calc(12px + 0.5vw);
   font-weight: 300;
   margin-bottom: 50px;

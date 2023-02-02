@@ -1,14 +1,8 @@
 .Card {
-  --card_radius: 0.75em;
-  border: solid 3px var(--font-dark);
-  border-radius: var(--card_radius);
-  border: none;
-  background: var(--font-dark);
-  cursor: pointer;
+  --b-rad: 0.75em;
   width: 350px;
-  height: 420px;
-  padding: 0;
-  border: none;
+  height: 400px;
+  border-radius: var(--b-rad);
   background: var(--font-dark);
   cursor: pointer;
   transform: translateX(0.3em);
@@ -16,78 +10,43 @@
 
 .card-top {
   user-select: none;
-  display: block;
-  border: 2px solid var(--background-dark);
-  border-radius: var(--card_radius);
-  background: var(--background-light);
-  color: var(--background-dark);
-  transform: translateY(-0.6em) translateX(-0.6em);
   transition: transform 0.1s ease;
-  width: 350px;
-  height: 420px;
-  overflow: hidden;
+  transform: translateY(-0.6em) translateX(-0.6em);
 }
 
 .Card:hover .card-top {
-  transform: translateY(-1.2em) translateX(-0.6em);
+  transform: translateY(-0.3em) translateX(-0.3em);
 }
 
 .Card .title-container {
-  border-bottom: solid 3px #111;
+  height: 80px;
+  border: solid 2px var(--font-dark);
+  border-radius: var(--b-rad) var(--b-rad) 0 0;
+  background-color: var(--color-one-dark);
+  color: var(--font-light);
   display: flex;
-  height: 70px;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   overflow: hidden;
-}
-
-.Card .title-container::before {
-  content: '';  
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 350px;
-  background-color: var(--primary-color);
-  z-index: -1;
-  transition: 200ms ease-in-out;
-
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.Card:hover .title-container::before {
-  transform: scaleX(1);
-}
-
-.Card:hover .title-container .card-title {
-  color: var(--font-light);
-  font-style: italic;
 }
 
 .Card .card-title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .skills-container {
-  padding:30px;
-  height: 400px;
+  border: solid 2px #111;
+  border-top: none;
+  border-radius: 0 0 var(--b-rad) var(--b-rad);
+  background: var(--background-light);  
+  padding: 30px 10px;
+  height: 250px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0;
-  grid-auto-rows: minmax(50px, 100px);
 }
 
-.green {
-  background-color: #7bf770;
-}
-
-.pink {
-  background-color: #f396f3;
-}
-
-.yellow {
-  background-color: #fdf36b;
+.Card.darkmode .skills-container {
+  background: var(--background-dark);
+  color: var(--font-light);
 }

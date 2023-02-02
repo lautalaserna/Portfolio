@@ -11,6 +11,7 @@ button {
   border-radius: var(--button_radius);
   background: var(--font-dark);
   cursor: pointer;
+  max-width: 250px;
 }
 
 button.darkmode {
@@ -32,7 +33,7 @@ button.darkmode {
 
 button.darkmode .button_top{
   border-color: var(--font-dark);
-  background: var(--primary-color);
+  background: var(--color-one);
   color: var(--font-dark);
 }
 

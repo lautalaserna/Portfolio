@@ -103,10 +103,10 @@ const Navbar = () => {
         </li>
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
-        <Switch onClick={() => setOpen(open => !open)} darkMode={darkMode || scroll} icon={home} />
+        <Switch onClick={() => setOpen(open => !open)} darkMode={darkMode /* || scroll */} icon={home} />
       </div>
       <div className="nav-switch">
-        <Switch onClick={toggleDarkMode} darkMode={darkMode || scroll} icon={moon}/>
+        <Switch onClick={toggleDarkMode} darkMode={darkMode /* || scroll */} icon={moon}/>
       </div>
     </nav>
   )

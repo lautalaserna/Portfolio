@@ -35,9 +35,9 @@ const Welcome: React.FC<WelcomeInterface> = () => {
       </div>
       <Button darkMode={darkMode} content="Contact me" />
       <div className="social-container">
-        <SocialIcon icon={linkedin} darkMode={darkMode} />
-        <SocialIcon icon={git} darkMode={darkMode} />
-        <SocialIcon icon={ig} darkMode={darkMode} />
+        <SocialIcon icon={linkedin} darkMode={darkMode} url={'https://www.linkedin.com/in/lautaro-laserna/'}/>
+        <SocialIcon icon={git} darkMode={darkMode} url={'https://github.com/lautalaserna'}/>
+        <SocialIcon icon={ig} darkMode={darkMode} url={'https://www.instagram.com/lautalaserna/'}/>
       </div>
     </section>
   )

@@ -11,11 +11,12 @@ export interface CardInterface {
   title: string
   skillList: SkillType[]
   color?: string
+  darkMode?: boolean
 }
 
-const Card: React.FC<CardInterface> = ({ title, skillList, color }) => {
+const Card: React.FC<CardInterface> = ({ title, skillList, color, darkMode }) => {
   return (
-    <div className="Card">
+    <div className={`Card ${darkMode ? 'darkmode' : ''}`}>
       <div className="card-top">
         <div className={`title-container ${color ? color : ''}`}>
           <h1 className="card-title">{title}</h1>

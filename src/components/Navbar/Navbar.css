@@ -4,7 +4,8 @@
   left: 0;
   right: 0;
   z-index: 999;
-  height: 50px;
+  /* height: 50px; */
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,13 +14,16 @@
   padding-right: 80px;
   background-color: transparent;
   transition: 200ms ease-in;
+
+  background-color: var(--nav-color);
+  border-bottom: solid 3px var(--background-dark);
 }
 
-.Navbar.scroll {
+/* .Navbar.scroll {
   height: 40px;
   background-color: var(--nav-color);
 }
-
+ */
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5,auto);
@@ -65,13 +69,14 @@
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  color: #111;
+  /* color: #111; */
+  color: var(--font-light);
   cursor: pointer;
 }
 
-.nav-link.scroll {
+/* .nav-link.scroll {
   color: #eee;
-}
+} */
 
 .nav-icons {
   user-select: none;

@@ -1,12 +1,12 @@
 .Welcome {
   align-self: stretch;
-  padding-top: 35vh;
-  padding-bottom: 10vh;
+  padding-top: 30vh;
+  padding-bottom: 15vh;
   height: 55vh;
   background-color: var(--background-light);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -14,23 +14,27 @@
   background-color: var(--background-dark);
 }
 
-.text-container {
+.Welcome .text-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.title-container {
+.Welcome .title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 0px;
+  flex-wrap: wrap;
 }
 
-.title {
+.Welcome .title {
   margin: 0;
-  margin-right: 15px;
   font-weight: 300;
-  font-size: calc(35px + 4vw);
+  font-size: calc(40px + 5vw);
   user-select: none;
 }
 
@@ -38,33 +42,34 @@
   color: var(--font-light);
 }
 
-.name {
-  font-size: calc(40px + 4vw);
+.Welcome .name {
+  margin: 0;
+  font-size: calc(45px + 5vw);
   font-weight: 400;
-  color: var(--primary-color);
+  color: var(--color-one);
   user-select: none;
 } 
 
-.desc {
+.Welcome .desc {
   text-align: center;
   margin: 0;
   font-size: calc(12px + 0.8vw);
   font-weight: 300;
-  color: var(--primary-color);
+  color: var(--color-one);
   user-select: none;
 }
 
-.stick{
+.Welcome .stick{
   width: 4px;
   height: calc(60px + 3vw);
-  background-color: var(--primary-color);
+  background-color: var(--color-one);
 }
 
 .hidden {
   display: none;
 }
 
-.social-container {
+.Welcome .social-container {
   padding-top: 15px;
   display: flex;
   gap: 10px;
