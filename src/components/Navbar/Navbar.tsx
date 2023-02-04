@@ -13,7 +13,7 @@ const Navbar = () => {
   const [mobile, setMobile] = useState(false)
   const [open, setOpen] = useState(false)
 
-  const {darkMode, toggleDarkMode} = useContext(ThemeContext)
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext)
 
   const handleScroll = (e: Event) => {
     if (window.pageYOffset > 40) {
@@ -88,25 +88,35 @@ const Navbar = () => {
           <Link
             className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
-            to="home"
+            to="projects"
             smooth={true}
             offset={-100}
             duration={500}
           >
-            Proyects
+            Projects
           </Link>
         </li>
         <li className="nav-item">
-          <a className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
+          <Link
+            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
+            onClick={() => setOpen(false)}
+            to="contact"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             Contact
-          </a>
+          </Link>
+          {/*  <a className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
+            Contact
+          </a> */}
         </li>
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
         <Switch onClick={() => setOpen(open => !open)} darkMode={darkMode /* || scroll */} icon={home} />
       </div>
       <div className="nav-switch">
-        <Switch onClick={toggleDarkMode} darkMode={darkMode /* || scroll */} icon={moon}/>
+        <Switch onClick={toggleDarkMode} darkMode={darkMode /* || scroll */} icon={moon} />
       </div>
     </nav>
   )

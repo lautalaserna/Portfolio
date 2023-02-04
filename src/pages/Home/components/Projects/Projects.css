@@ -1,0 +1,25 @@
+.Projects {
+  align-self: stretch;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--color-three);
+}
+
+.content {
+  max-width: 800px;
+}
+
+.Projects h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: "Misto";
+}
+
+.Projects p {
+  font-size: 20px;
+  font-weight: 400;
+}

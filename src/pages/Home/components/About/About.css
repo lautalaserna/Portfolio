@@ -7,6 +7,8 @@
   background: var(--background-light);
   user-select: none;
   overflow: hidden;
+
+/*   background: var(--color-three); */
 }
 
 .About.darkmode {
@@ -20,34 +22,43 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 30px;
+  column-gap: 120px;
   background-color: var(--color-two);
+  z-index: 1;
+
+  /* background-color: var(--background-light); */
 }
 
 .About .divider-top {
   width: 200%;
-  height: 120px;
+  height: 116px;
   background-color: var(--color-two);
   transform: rotate(-3deg) translateX(-20px);
-  z-index: 1;
+  border-top: solid 4px var(--font-dark);
+  z-index: 0;
+
+  /* background-color: var(--background-light); */
 }
 
 .About.darkmode .divider-top {
-  height: 118px;
-  border-top: solid 2px var(--background-light);
+  height: 116px;
+  border-top: solid 4px var(--background-light);
 }
 
 .About .divider-bottom {
   width: 200%;
-  height: 120px;
+  height: 116px;
   background-color: var(--color-two);
   transform: rotate(3deg) translateX(-20px);
-  z-index: 1;
+  border-bottom: solid 4px var(--font-dark);
+  z-index: 0;
+
+  /* background-color: var(--background-light); */
 }
 
 .About.darkmode .divider-bottom {
-  height: 118px;
-  border-bottom: solid 2px var(--background-light);
+  height: 116px;
+  border-bottom: solid 4px var(--background-light);
 }
 
 .About .text-container {
@@ -67,14 +78,19 @@
   color: var(--font-light);
   font-size: calc(14px + 0.3vw);
   font-weight: 300;
+
+  /* color: var(--font-dark); */
 }
 
 .About .title {
   margin: 0;
   padding: 0;
   font-size: 60px;
-  font-weight: 400;
-  color: #eee;
+  font-weight: 600;
+  color: var(--font-light);
+
+ /*  font-family: "Misto";
+  color: var(--font-dark); */
 }
 
 .image {
@@ -96,4 +112,11 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+
+/*   border: solid 3px var(--font-dark);
+  border-radius: 30px;
+  box-shadow: 0 6px 0 0 var(--font-dark);
+  padding-bottom: 30px;
+  background-color: var(--color-one);
+*/
 }

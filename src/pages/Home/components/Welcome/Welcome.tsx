@@ -9,6 +9,8 @@ import './Welcome.css'
 export interface WelcomeInterface {}
 
 const Welcome: React.FC<WelcomeInterface> = () => {
+  // 'L', 'a', 'u', 't', 'i', '.'
+  // 'L', 'a', 'u', 't', 'a','r','o',' ', 'L', 'a','s','e','r','n','a'
   const letters = ['L', 'a', 'u', 't', 'i', '.']
   const [name, setName] = useState('')
   const [pos, setPos] = useState(0)
@@ -31,7 +33,7 @@ const Welcome: React.FC<WelcomeInterface> = () => {
           <span className="name">{name}</span>
           <div className={`stick ${pos == letters.length ? 'hidden' : ''}`}></div>
         </div>
-        <h4 className="desc">I'm a software engineer and a full stack developer.</h4>
+        <h4 className="desc">Software engineer & Full stack developer.</h4>
       </div>
       <Button darkMode={darkMode} content="Contact me" />
       <div className="social-container">

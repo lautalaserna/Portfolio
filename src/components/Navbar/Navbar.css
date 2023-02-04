@@ -4,8 +4,7 @@
   left: 0;
   right: 0;
   z-index: 999;
-  /* height: 50px; */
-  height: 40px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,9 +13,7 @@
   padding-right: 80px;
   background-color: transparent;
   transition: 200ms ease-in;
-
   background-color: var(--nav-color);
-  border-bottom: solid 3px var(--background-dark);
 }
 
 /* .Navbar.scroll {
@@ -50,6 +47,10 @@
   transition: all 300ms ease-in-out;
 }
 
+.nav-menu.mobile .nav-link {
+  color: var(--font-light);
+}
+
 .nav-menu.mobile.open {
   background-color: var(--nav-color);
   left: 0;
@@ -69,7 +70,6 @@
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  /* color: #111; */
   color: var(--font-light);
   cursor: pointer;
 }

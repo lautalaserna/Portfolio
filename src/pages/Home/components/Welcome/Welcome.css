@@ -26,20 +26,22 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 50px;
   row-gap: 0px;
   flex-wrap: wrap;
 }
 
 .Welcome .title {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: calc(40px + 5vw);
   user-select: none;
 }
 
 .Welcome.darkmode .title {
   color: var(--font-light);
+
+  color: var(--font-dark);
 }
 
 .Welcome .name {
@@ -48,7 +50,7 @@
   font-weight: 400;
   color: var(--color-one);
   user-select: none;
-} 
+}
 
 .Welcome .desc {
   text-align: center;
@@ -59,8 +61,8 @@
   user-select: none;
 }
 
-.Welcome .stick{
-  width: 4px;
+.Welcome .stick {
+  width: 8px;
   height: calc(60px + 3vw);
   background-color: var(--color-one);
 }

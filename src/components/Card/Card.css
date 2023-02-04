@@ -1,52 +1,76 @@
 .Card {
-  --b-rad: 0.75em;
-  width: 350px;
-  height: 400px;
+  --b-rad: 25px;
+  --card-w: 300px;
+  --card-h: 350px;
+  width: var(--card-w);
+  height:var(--card-h);
   border-radius: var(--b-rad);
   background: var(--font-dark);
-  cursor: pointer;
-  transform: translateX(0.3em);
-}
-
-.card-top {
-  user-select: none;
-  transition: transform 0.1s ease;
-  transform: translateY(-0.6em) translateX(-0.6em);
-}
-
-.Card:hover .card-top {
-  transform: translateY(-0.3em) translateX(-0.3em);
-}
-
-.Card .title-container {
-  height: 80px;
+  background-color: var(--background-light);
   border: solid 2px var(--font-dark);
-  border-radius: var(--b-rad) var(--b-rad) 0 0;
-  background-color: var(--color-one-dark);
-  color: var(--font-light);
+  box-shadow: 7px 7px 0 0 var(--font-dark);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.Card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon-container {
+  position: relative;
+  top: -35px;
+  left: 114px;
+  background-color: var(--color-three);
+  width: 70px;
+  height: 70px;
+  border: solid 2px var(--font-dark);
+  box-shadow: 3px 2px 0 0 var(--font-dark);
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-.Card .card-title {
-  font-size: 24px;
+.card-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.card-content {
+  position: relative;
+  top: -25px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-content .card-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--font-dark);
+  border-bottom: solid 2px var(--font-dark);
+}
+
+
+.card-content .card-desc {
+  margin: 0;
   font-weight: 400;
 }
 
-.skills-container {
-  border: solid 2px #111;
-  border-top: none;
-  border-radius: 0 0 var(--b-rad) var(--b-rad);
-  background: var(--background-light);  
-  padding: 30px 10px;
-  height: 250px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  gap: 12px;
 }
 
-.Card.darkmode .skills-container {
-  background: var(--background-dark);
-  color: var(--font-light);
+.footer-icon{
+  width: 45px;
+/*   filter: invert(0%) sepia(100%) saturate(0%); */
 }

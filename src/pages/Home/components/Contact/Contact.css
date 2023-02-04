@@ -1,0 +1,124 @@
+.Contact {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  background-color: var(--background-light);
+}
+
+.Contact .contact-title {
+  font-size: calc(50px + 3vw);
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.Contact .contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact .contact-img {
+  width: calc(350px + 3vw);
+}
+
+.contact-form {
+  width: 40vw;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 600px;
+  border: solid 2px var(--font-dark);
+  border-radius: 30px 30px 0px 0px;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-inputs {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap:6px;
+}
+
+.form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.input-content {
+  width: 93%;
+  height: 40px;
+  border: solid 2px var(--font-dark);
+  box-shadow: 2px 2px 0 0 var(--font-dark);
+  border-radius: 12px;
+  user-select: none;
+  outline: none;
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.form-textarea {
+  width: 95%;
+  height: 300px;
+  border: solid 2px var(--font-dark);
+  box-shadow: 2px 2px 0 0 var(--font-dark);
+  border-radius: 12px;
+  user-select: none;
+  outline: none;  
+  resize: none;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.form-button {
+  /* Variables */
+  padding: 0;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: var(--font-dark);
+  cursor: pointer;
+  width: 100%;
+}
+
+.Contact .button_top {
+  width: 100%;
+  user-select: none;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--background-dark);
+  border-radius: 12px;
+  padding: 0.8em 1.6em;
+  background: var(--color-one);
+  color: var(--font-light);
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  transform: translateY(-0.5em);
+  transition: transform 0.1s ease;
+}
+
+.form-button:hover .button_top {
+ transform: translateY(-0.33em);
+}
+
+.form-button:active .button_top {
+ transform: translateY(0);
+}
