@@ -32,34 +32,38 @@ const Skills: React.FC<SkillsInterface> = () => {
         <h4 className="desc">Here are some of my most used stacks.</h4>
       </div>
       <div className="cards-container">
-        <Card
-          icon={coffee}
-          title="Desktop Apps"
-          desc="I have a strong base in object oriented programming, desing patterns and good practices using Java as my main lenguaje."
-          skillsList={[java, eclipse]}
-          darkMode={darkMode}
-        />
-        <Card
-          icon={tags}
-          title="Web Design"
-          desc="Currently I have the most fun building responsive websites using React, specially with Typescript, and styling with CSS."
-          skillsList={[react, js, ts, css]}
-          darkMode={darkMode}
-        />
-        <Card
-          icon={json}
-          title="REST Services"
-          desc="API consuming as well as creating my own ones. My prefered leanguajes are Python with FastAPI or NodeJS with Axios/Express."
-          skillsList={[python, node, express]}
-          darkMode={darkMode}
-        />
-        <Card
-          icon={database}
-          title="Databases"
-          desc="Wide experience in relational database designing and DML lenguajes. Also I have experience with NoSQL databases."
-          skillsList={[postgre, mongo, mysql]}
-          darkMode={darkMode}
-        />
+        <div className="card-pair">
+          <Card
+            icon={coffee}
+            title="Desktop Apps"
+            desc="I have a strong base in object oriented programming, desing patterns and good practices using Java as my main lenguaje."
+            skillsList={[java, eclipse]}
+            darkMode={darkMode}
+          />
+          <Card
+            icon={tags}
+            title="Web Design"
+            desc="Currently I have the most fun building responsive websites using React, specially with Typescript, and styling with CSS."
+            skillsList={[react, js, ts, css]}
+            darkMode={darkMode}
+          />
+        </div>
+        <div className="card-pair">
+          <Card
+            icon={json}
+            title="REST Services"
+            desc="API consuming as well as creating my own ones. My prefered leanguajes are Python with FastAPI or NodeJS with Axios/Express."
+            skillsList={[python, node, express]}
+            darkMode={darkMode}
+          />
+          <Card
+            icon={database}
+            title="Databases"
+            desc="Wide experience in relational database designing and DML lenguajes. Also I have experience with NoSQL databases."
+            skillsList={[postgre, mongo, mysql]}
+            darkMode={darkMode}
+          />
+        </div>
       </div>
     </section>
   )

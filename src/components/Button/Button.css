@@ -2,39 +2,39 @@
 
 button {
   /* Variables */
-  font-family: 'Poppins', sans-serif;
   --button_radius: 0.75em;
+  --btn-color: var(--bg-light);
+  --btn-border: var(--font-dark);
+  --btn-font: var(--font-dark);
+
+  max-width: 300px;
   padding: 0;
-  font-size: calc(15px + 0.2vw);
-  font-weight: 600;
   border: none;
   border-radius: var(--button_radius);
-  background: var(--font-dark);
+  background: var(--btn-border);
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 600;
   cursor: pointer;
-  max-width: 250px;
 }
 
 button.darkmode {
-  background: var(--font-dark);
+  --btn-color: var(--orange);
+  --btn-border: var(--font-dark);
+  --btn-font: var(--font-dark);
 }
 
 .button_top {
-  user-select: none;
+  padding: 0.8em 1.6em;
   display: block;
   box-sizing: border-box;
-  border: 2px solid var(--background-dark);
+  border: 2px solid var(--btn-border);
   border-radius: var(--button_radius);
-  padding: 0.8em 1.6em;
-  background: var(--background-light);
-  color: var(--background-dark);
+  background: var(--btn-color);
+  color: var(--btn-font);
+  user-select: none;
   transform: translateY(-0.5em);
   transition: transform 0.1s ease;
-}
-
-button.darkmode .button_top{
-  border-color: var(--font-dark);
-  background: var(--color-one);
-  color: var(--font-dark);
 }
 
 button:hover .button_top {

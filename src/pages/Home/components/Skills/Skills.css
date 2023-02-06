@@ -1,59 +1,71 @@
 .Skills {
+  /* Variables */
+  --bg-skills: var(--bg-light);
+  --font-title: var(--font-dark);
+  --font-desc: var(--orange);
+
+  padding-top: 50px;
+  padding-bottom: 200px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--background-light);
-  padding-top: 50px;
-  padding-bottom: 200px;
-  user-select: none;
+  background: var(--bg-skills);
 }
 
 .Skills.darkmode {
-  background: var(--background-dark);
+  --bg-skills: var(--bg-dark);
+  --font-title: var(--font-light);
+  --font-desc: var(--orange);
 }
 
 .Skills .skills-text {
+  margin-left: 10%;
+  margin-bottom: 50px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-left: 10%;
-  margin-bottom: 50px;
 }
 
 .Skills .title {
   margin: 0;
   padding: 0;
-  color: var(--font-dark);
+  color: var(--font-title);
   font-size: calc(45px + 0.8vw);  
-  font-weight: 600;
   text-align: start;
-  
-/*   font-family: "Misto"; */
-}
-
-.Skills.darkmode .title {
-  color: var(--font-light);  
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
 }
 
 .Skills .desc {
   margin: 0;
+  padding-bottom: 20px;
   font-weight: 300;
   font-size: calc(15px + 0.5vw);
-  padding-bottom: 20px;
-  color: var(--color-one);
+  color: var(--font-desc);
 }
 
 .cards-container {
-  margin: auto;
   max-width: 1600px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  column-gap: 5vw;
+  row-gap: 60px;
+}
+
+.card-pair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5vw;
+  flex-wrap: wrap;
+  row-gap: 60px;
 }

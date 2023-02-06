@@ -1,74 +1,56 @@
 .Welcome {
+  /* Variables */
+  --bg-color: var(--bg-light);
+  --title-color: var(--orange);
+  --desc-color: var(--font-dark);
+
+  height: 80vh;
+  padding-top: 20vh;
   align-self: stretch;
-  padding-top: 30vh;
-  padding-bottom: 15vh;
-  height: 55vh;
-  background-color: var(--background-light);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 30px;
+  background-color: var(--bg-color);
 }
 
 .Welcome.darkmode {
-  background-color: var(--background-dark);
+  --bg-color: var(--bg-dark);
+  --title-color: var(--orange);
+  --desc-color: var(--font-light);
 }
 
-.Welcome .text-container {
+.Welcome .welcome-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.Welcome .title-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 50px;
-  row-gap: 0px;
-  flex-wrap: wrap;
 }
 
 .Welcome .title {
   margin: 0;
-  font-weight: 400;
-  font-size: calc(40px + 5vw);
-  user-select: none;
-}
-
-.Welcome.darkmode .title {
-  color: var(--font-light);
-
-  color: var(--font-dark);
-}
-
-.Welcome .name {
-  margin: 0;
-  font-size: calc(45px + 5vw);
-  font-weight: 400;
-  color: var(--color-one);
-  user-select: none;
+  text-align: center;
+  font-weight: var(--title-weight);
+  font-family: var(--title-font);
+  line-height: 1.2;
+  font-size: calc(60px + 1.8vw);
+  color: var(--title-color);
 }
 
 .Welcome .desc {
-  text-align: center;
   margin: 0;
+  text-align: left;
   font-size: calc(12px + 0.8vw);
   font-weight: 300;
-  color: var(--color-one);
-  user-select: none;
+  line-height: 4;
+  color: var(--desc-color);
 }
 
 .Welcome .stick {
   width: 8px;
   height: calc(60px + 3vw);
-  background-color: var(--color-one);
-}
-
-.hidden {
-  display: none;
+  background-color: var(--title-color);
 }
 
 .Welcome .social-container {

@@ -1,32 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-  font-family: "Misto";
-  src: url("./assets/fonts/Misto.woff") format('woff');
+  font-family: 'Misto';
+  src: url('./assets/fonts/Misto.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Hanson";
-  src: url("./assets/fonts/Hanson-Bold.ttf");
+  font-family: 'Manbow Solid';
+  src: url('./assets/fonts/manbow-solid.ttf');
 }
 
 @font-face {
-  font-family: "Vantage";
-  src: url("./assets/fonts/Vantage.ttf");
+  font-family: 'Glora';
+  src: url('./assets/fonts/Glora-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Matamata';
+  src: url('./assets/fonts/Matamata-Bold.otf');
 }
 
 :root {
-  --color-one: #6060ff;
-  --color-two: #4646d8;
-  --color-three: #f8b73e;
-  --color-four: #852a85;
-  --background-light: #f8f8f8;
-  --background-dark: #212935;
+  --orange: tomato;
+  --blue: #375bff;
+  --gold: #f8b73e;
+  --bg-light: #f8f8f8;
+  --bg-dark: #212935;
   --font-light: #f8f8f8;
   --font-dark: #101010;
 
-  --nav-color: #181b22;
+  --title-font: 'Misto';
+  --title-font: 'Matamata';
+  --title-font: 'Glora';
+  --title-font: 'Manbow Solid';
+  --title-weight: 600;
 }
 
 body {

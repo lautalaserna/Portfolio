@@ -1,68 +1,66 @@
 .Navbar {
+  /* Varibles */
+  --nav-color: #181b22;
+  --nav-font: var(--font-light);
+  --nav-border: transparent;
+
+  height: 35px;
+  padding: 2rem;
+  padding-left: 80px;
+  padding-right: 80px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  padding-left: 80px;
-  padding-right: 80px;
-  background-color: transparent;
   transition: 200ms ease-in;
   background-color: var(--nav-color);
+  border-bottom: solid 3px var(--nav-border);
 }
 
-/* .Navbar.scroll {
-  height: 40px;
-  background-color: var(--nav-color);
-}
- */
 .nav-menu {
+  padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(5,auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: calc(15px + 2vw);
   list-style: none;
-  padding-left: 0;
 }
 
 .nav-menu.mobile {
-  background-color: var(--nav-color);
+  width: 220px;
+  height: 100vh;
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: 99px;
+  left: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 220px;
-  height: 100vh;
-  position: absolute;
-  top:104px;
-  left:-100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  background-color: var(--nav-color);
   transition: all 300ms ease-in-out;
 }
 
 .nav-menu.mobile .nav-link {
-  color: var(--font-light);
+  color: var(--nav-font);
 }
 
 .nav-menu.mobile.open {
-  background-color: var(--nav-color);
   left: 0;
+  background-color: var(--nav-color);
   transition: all 300ms ease-in-out;
 }
 
-.nav-item { 
+.nav-item {
   transition: 200ms ease-in-out;
   user-select: none;
 }
 
-.nav-item:hover{
+.nav-item:hover {
   transform: scale(1.1);
 }
 
@@ -70,21 +68,17 @@
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  color: var(--font-light);
+  color: var(--nav-font);
   cursor: pointer;
 }
 
-/* .nav-link.scroll {
-  color: #eee;
-} */
-
 .nav-icons {
-  user-select: none;
   display: flex;
   align-self: stretch;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  user-select: none;
 }
 
 .nav-switch {
@@ -99,6 +93,6 @@
   display: flex;
 }
 
-.hiden {
+.hidden {
   display: none;
 }

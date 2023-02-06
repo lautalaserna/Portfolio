@@ -1,15 +1,22 @@
 .Card {
+  /* Variables */
   --b-rad: 25px;
   --card-w: 300px;
   --card-h: 350px;
+  --icon-bg: var(--gold);
+  --icon-color: var(--font-dark);
+  --card-border: var(--font-dark);
+  --card-title: var(--font-dark);
+
   width: var(--card-w);
-  height:var(--card-h);
+  height: var(--card-h);
   border-radius: var(--b-rad);
   background: var(--font-dark);
-  background-color: var(--background-light);
+  background-color: var(--bg-light);
   border: solid 2px var(--font-dark);
   box-shadow: 7px 7px 0 0 var(--font-dark);
   cursor: pointer;
+  user-select: none;
   transition: 200ms ease-in-out;
 }
 
@@ -18,18 +25,18 @@
 }
 
 .card-icon-container {
+  width: 70px;
+  height: 70px;
   position: relative;
   top: -35px;
   left: 114px;
-  background-color: var(--color-three);
-  width: 70px;
-  height: 70px;
-  border: solid 2px var(--font-dark);
-  box-shadow: 3px 2px 0 0 var(--font-dark);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--icon-bg);
+  border: solid 2px var(--icon-color);
+  border-radius: 50%;
+  box-shadow: 3px 2px 0 0 var(--card-border);
 }
 
 .card-icon {
@@ -38,24 +45,23 @@
 }
 
 .card-content {
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
   top: -25px;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .card-content .card-title {
   margin: 0;
   font-size: 30px;
   font-weight: 400;
-  color: var(--font-dark);
-  border-bottom: solid 2px var(--font-dark);
+  color: var(--card-title);
+  border-bottom: solid 2px var(--card-border);
 }
-
 
 .card-content .card-desc {
   margin: 0;
@@ -70,7 +76,6 @@
   gap: 12px;
 }
 
-.footer-icon{
+.footer-icon {
   width: 45px;
-/*   filter: invert(0%) sepia(100%) saturate(0%); */
 }
