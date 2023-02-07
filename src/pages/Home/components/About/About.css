@@ -37,7 +37,7 @@
   background-color: var(--bg-about);
 }
 
-.About .divider-top {
+/* .About .divider-top {
   width: 200%;
   height: 116px;
   z-index: 0;
@@ -45,7 +45,7 @@
   border-top: solid 4px var(--border-top);
   transform: rotate(-3deg) translateX(-20px);
 }
-
+ */
 .About .divider-bottom {
   width: 200%;
   height: 116px;

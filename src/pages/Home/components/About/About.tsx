@@ -17,7 +17,7 @@ const About: React.FC<AboutInterface> = () => {
       <div className="divider-top"></div>
       <div className="about-container">
         <div className="text-container">
-          <h1 className="title">About me.</h1>
+          <h1 className="title">Who am I?</h1>
           <p>
             My name is Lautaro Laserna and I'm a passionate developer from Argentina. I have a strong base in object
             oriented programming, design patterns, clean architecture and database management. I'm always looking to

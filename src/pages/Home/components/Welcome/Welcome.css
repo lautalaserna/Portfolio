@@ -34,7 +34,7 @@
   font-weight: var(--title-weight);
   font-family: var(--title-font);
   line-height: 1.2;
-  font-size: calc(60px + 1.8vw);
+  font-size: calc(60px + 2vw);
   color: var(--title-color);
 }
 
