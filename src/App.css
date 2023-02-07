@@ -12,16 +12,18 @@
 
 :root {
   --orange: #f5724f;
+  --organge: tomato;
   --blue: #375bff;
-  --gold: #f8b73e;
-  --gold: #fec62e;
+  --blue: #a49df8;
+  --gold: #fabf53;
   --bg-light: #f8f8f8;
-  --bg-dark: #212935;
+  --bg-dark: #303338;
   --font-light: #f8f8f8;
   --font-dark: #101010;
 
   --title-font: 'Manbow Solid';
   --title-weight: 600;
+  --page-border: 3px;
 }
 
 body {
@@ -29,4 +31,5 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  border: solid var(--page-border) var(--font-dark);
 }

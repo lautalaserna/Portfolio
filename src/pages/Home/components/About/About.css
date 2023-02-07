@@ -1,11 +1,11 @@
 .About {
   /* Variables */
-  --bg-about: var(--blue);
+  --bg-about: var(--gold);
   --bg-double: linear-gradient(180deg, var(--bg-light) 50%, var(--bg-light) 50%);
   --border-top: var(--font-dark);
   --border-bottom: var(--font-dark);
-  --font-title: var(--font-light);
-  --font-content: var(--font-light);
+  --font-title: var(--font-dark);
+  --font-content: var(--font-dark);
 
   margin: 0;
   align-self: stretch;
@@ -71,7 +71,7 @@
   padding: 0;
   color: var(--font-content);
   font-size: calc(14px + 0.3vw);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .About .title {

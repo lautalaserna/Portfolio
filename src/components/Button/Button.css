@@ -2,7 +2,7 @@
 
 button {
   /* Variables */
-  --button_radius: 0.75em;
+  --button_radius: 15px;
   --btn-color: var(--bg-light);
   --btn-border: var(--font-dark);
   --btn-font: var(--font-dark);
@@ -19,7 +19,7 @@ button {
 }
 
 button.darkmode {
-  --btn-color: var(--orange);
+  --btn-color: var(--bg-light);
   --btn-border: var(--font-dark);
   --btn-font: var(--font-dark);
 }

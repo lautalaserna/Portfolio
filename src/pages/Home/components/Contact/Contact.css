@@ -7,7 +7,7 @@
   --border-color: var(--font-dark);
   --font-contact: var(--font-dark);
   --btn-color: var(--blue);
-  --btn-font: var(--font-light);
+  --btn-font: var(--font-dark);
 
   padding-top: 80px;
   align-self: stretch;
@@ -168,7 +168,7 @@
   background: var(--btn-color);
   color: var(--btn-font);
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 0.3;
   letter-spacing: 3px;
   font-family: var(--title-font), sans-serif;

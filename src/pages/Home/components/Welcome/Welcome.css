@@ -1,60 +1,109 @@
 .Welcome {
   /* Variables */
-  --bg-color: var(--bg-light);
-  --title-color: var(--orange);
+  --bg-color-left: var(--blue);
+  --bg-color-right: var(--bg-light);
+  --title-color: var(--font-dark);
   --desc-color: var(--font-dark);
+  --name-color: var(--font-dark);
 
-  height: 80vh;
-  padding-top: 20vh;
+  height: 100vh;
+  min-height: 800px;
+  box-sizing: border-box;
   align-self: stretch;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  align-items: stretch;
+  user-select: none;
   background-color: var(--bg-color);
 }
 
 .Welcome.darkmode {
-  --bg-color: var(--bg-dark);
-  --title-color: var(--orange);
+  --bg-color-right: var(--bg-dark);
   --desc-color: var(--font-light);
+  --name-color: var(--font-light);
 }
 
-.Welcome .welcome-hero {
+.Welcome .container-left {
+  width: 40%;
+  padding-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: calc(1vh);
+  background-color: var(--bg-color-left);
+  border-right: solid var(--page-border) var(--font-dark);
+}
+
+.Welcome .container-right {
+  width: 55%;
+  padding-right: 5%;
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1vh;
+  background-color: var(--bg-color-right);
+}
+
+@media (max-width: 900px) {
+  .Welcome .container-left {
+    display: none;
+  }
+
+  .Welcome .container-right{
+    width: 100%;
+    background: var(--blue);
+  }
 }
 
 .Welcome .title {
   margin: 0;
-  text-align: center;
+  text-align: end;
   font-weight: var(--title-weight);
   font-family: var(--title-font);
-  line-height: 1.2;
-  font-size: calc(60px + 2vw);
+  line-height: 1.1;
+  letter-spacing: 0.2vw;
+  font-size: calc(10px + 4vw);
   color: var(--title-color);
+}
+
+.title.clear {
+  font-family: 'Manbow Clear';
+}
+
+.Welcome .name {
+  margin: 0;
+  text-align: end;
+  font-weight: var(--title-weight);
+  font-family: var(--title-font);
+  line-height: 1;
+  font-size: calc(45px + 4vw);
+  color: var(--name-color);
 }
 
 .Welcome .desc {
   margin: 0;
+  margin-bottom: 50px;
   text-align: left;
   font-size: calc(12px + 0.8vw);
   font-weight: 300;
-  line-height: 4;
+  line-height: 2;
+  text-align: end;
   color: var(--desc-color);
-}
-
-.Welcome .stick {
-  width: 8px;
-  height: calc(60px + 3vw);
-  background-color: var(--title-color);
 }
 
 .Welcome .social-container {
   padding-top: 15px;
   display: flex;
   gap: 10px;
+}
+
+.Welcome .btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 30px;
 }

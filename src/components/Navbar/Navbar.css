@@ -1,10 +1,12 @@
 .Navbar {
   /* Varibles */
-  --nav-color: #181b22;
-  --nav-font: var(--font-light);
-  --nav-border: transparent;
+  --nav-color: var(--bg-light);
+  --nav-mobile-color: var(--font-dark);
+  --nav-font: var(--font-dark);
+  --nav-mobile-font: var(--font-light);
+  --nav-border: var(--font-dark);
 
-  height: 35px;
+  height: 25px;
   padding: 2rem;
   padding-left: 80px;
   padding-right: 80px;
@@ -18,7 +20,7 @@
   justify-content: space-between;
   transition: 200ms ease-in;
   background-color: var(--nav-color);
-  border-bottom: solid 3px var(--nav-border);
+  border: solid 3px var(--nav-border);
 }
 
 .nav-menu {
@@ -31,27 +33,27 @@
 
 .nav-menu.mobile {
   width: 220px;
-  height: 100vh;
+  height: 90vh;
   padding: 0;
   margin: 0;
+  padding-top: 10vh;
   position: absolute;
-  top: 99px;
+  bottom: -100vh;
   left: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--nav-color);
+  background-color: var(--nav-mobile-color);
   transition: all 300ms ease-in-out;
 }
 
 .nav-menu.mobile .nav-link {
-  color: var(--nav-font);
+  color: var(--nav-mobile-font);
 }
 
 .nav-menu.mobile.open {
   left: 0;
-  background-color: var(--nav-color);
   transition: all 300ms ease-in-out;
 }
 
@@ -65,7 +67,7 @@
 }
 
 .nav-link {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
   text-decoration: none;
   color: var(--nav-font);
