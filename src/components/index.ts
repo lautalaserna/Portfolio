@@ -1,6 +1,3 @@
 export * from './Navbar'
 export * from './Button'
-export * from './Switch'
-export * from './Card'
 export * from './Marquee'
-export * from './SocialIcon'

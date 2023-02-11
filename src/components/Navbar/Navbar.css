@@ -7,7 +7,7 @@
   --nav-border: var(--font-dark);
 
   height: 25px;
-  padding: 2rem;
+  padding: 30px;
   padding-left: 80px;
   padding-right: 80px;
   position: fixed;
@@ -20,7 +20,7 @@
   justify-content: space-between;
   transition: 200ms ease-in;
   background-color: var(--nav-color);
-  border: solid 3px var(--nav-border);
+  border: solid var(--page-border) var(--nav-border);
 }
 
 .nav-menu {

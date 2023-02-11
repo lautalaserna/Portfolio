@@ -1,11 +1,12 @@
 .Marquee {
-  height: calc(50px + 4vw);
+  height: calc(80px + 3vw);
   width: 100%;
   overflow: hidden;
   position: relative;
   background-color: var(--bg-light);
-  border-top: solid 4px var(--font-dark);
-  border-bottom: solid 4px var(--font-dark);
+  border-top: solid var(--page-border) var(--font-dark);
+  border-bottom: solid var(--page-border) var(--font-dark);
+  user-select: none;
 }
 
 .Marquee .marquee-item {

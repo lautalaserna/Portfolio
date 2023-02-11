@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: flex-start;
   background-color: var(--gold);
-  border-top: solid 4px black;
-  border-bottom: solid 4px black;
+  border-top: solid var(--page-border) var(--font-dark);
+  border-bottom: solid var(--page-border) var(--font-dark);
 }
 
 .content {
@@ -16,7 +16,7 @@
 
 .Projects h1 {
   margin: 0;
-  font-size: 60px;
+  font-size: calc(30px + 2vw);
   font-family: var(--title-font);
   font-weight: var(--title-weight);
 }

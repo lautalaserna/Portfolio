@@ -1,6 +1,7 @@
-import { ThemeContext } from '@/App'
+import { ThemeContext } from '@/context'
+import fly from './assets/flying-lauti.png'
 import React, { useContext } from 'react'
-import fly from '@/assets/flying-lauti.png'
+import { FormButton } from './components'
 import './Contact.css'
 
 export interface ContactInterface {}
@@ -24,9 +25,7 @@ const Contact: React.FC<ContactInterface> = () => {
           </div>
         </div>
         <textarea className="form-textarea" placeholder="What's up?" required />
-        <div className="form-button">
-          <input className="button_top" type="submit" value="Send"></input>
-        </div>
+        <FormButton content='Send'/>
       </form>
     </section>
   )

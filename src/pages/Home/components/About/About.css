@@ -1,11 +1,11 @@
 .About {
   /* Variables */
-  --bg-about: var(--gold);
+  --bg-about: var(--blue);
   --bg-double: linear-gradient(180deg, var(--bg-light) 50%, var(--bg-light) 50%);
   --border-top: var(--font-dark);
   --border-bottom: var(--font-dark);
   --font-title: var(--font-dark);
-  --font-content: var(--font-dark);
+  --font-content: var(--font-light);
 
   margin: 0;
   align-self: stretch;
@@ -13,10 +13,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
-  background: var(--bg-double)
+  background: var(--bg-double);
 }
 
 .About.darkmode {
+  /* Darkmode Variables */
   --bg-about: var(--blue);
   --bg-double: linear-gradient(180deg, var(--bg-dark) 50%, var(--bg-dark) 50%);
   --border-top: var(--font-light);
@@ -37,21 +38,12 @@
   background-color: var(--bg-about);
 }
 
-/* .About .divider-top {
-  width: 200%;
-  height: 116px;
-  z-index: 0;
-  background-color: var(--bg-about);
-  border-top: solid 4px var(--border-top);
-  transform: rotate(-3deg) translateX(-20px);
-}
- */
 .About .divider-bottom {
   width: 200%;
-  height: 116px;
+  height: 120px;
   z-index: 0;
   background-color: var(--bg-about);
-  border-bottom: solid 4px var(--border-bottom);
+  border-bottom: solid var(--page-border) var(--border-bottom);
   transform: rotate(3deg) translateX(-20px);
 }
 
@@ -77,7 +69,7 @@
 .About .title {
   margin: 0;
   padding: 0;
-  font-size: 60px;
+  font-size: calc(30px + 1.5vw);
   color: var(--font-title);
   font-family: var(--title-font);
   font-weight: var(--title-weight);

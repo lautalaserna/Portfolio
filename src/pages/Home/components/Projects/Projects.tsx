@@ -1,4 +1,4 @@
-import { ThemeContext } from '@/App'
+import { ThemeContext } from '@/context'
 import React, { useContext } from 'react'
 import './Projects.css'
 

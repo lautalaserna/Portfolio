@@ -1,10 +1,10 @@
-import { useEffect, useState, useContext } from 'react'
+import { ThemeContext } from '@/context'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
-import moon from '@/assets/moon.png'
-import home from '@/assets/home.png'
-import { Switch } from '@/components'
+import home from './assets/home.png'
+import moon from './assets/moon.png'
+import { Switch } from './components'
 import './Navbar.css'
-import { ThemeContext } from '@/App'
 
 export interface NavbarInterface {}
 
@@ -107,16 +107,13 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          {/*  <a className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`} onClick={() => setOpen(false)} href="/">
-            Contact
-          </a> */}
         </li>
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
-        <Switch onClick={() => setOpen(open => !open)} darkMode={darkMode /* || scroll */} icon={home} />
+        <Switch state={open} onClick={() => setOpen(open => !open)} darkMode={darkMode} icon={home} />
       </div>
       <div className="nav-switch">
-        <Switch onClick={toggleDarkMode} darkMode={darkMode /* || scroll */} icon={moon} />
+        <Switch state={darkMode} onClick={toggleDarkMode} darkMode={darkMode} icon={moon} />
       </div>
     </nav>
   )

@@ -7,7 +7,7 @@
   --name-color: var(--font-dark);
 
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
   box-sizing: border-box;
   align-self: stretch;
   display: flex;
@@ -19,6 +19,7 @@
 }
 
 .Welcome.darkmode {
+  /* Darkmode Variables */
   --bg-color-right: var(--bg-dark);
   --desc-color: var(--font-light);
   --name-color: var(--font-light);
@@ -66,7 +67,7 @@
   font-family: var(--title-font);
   line-height: 1.1;
   letter-spacing: 0.2vw;
-  font-size: calc(10px + 4vw);
+  font-size: calc(15px + 4vw);
   color: var(--title-color);
 }
 
@@ -80,7 +81,7 @@
   font-weight: var(--title-weight);
   font-family: var(--title-font);
   line-height: 1;
-  font-size: calc(45px + 4vw);
+  font-size: calc(50px + 3vw);
   color: var(--name-color);
 }
 
@@ -88,7 +89,7 @@
   margin: 0;
   margin-bottom: 50px;
   text-align: left;
-  font-size: calc(12px + 0.8vw);
+  font-size: calc(15px + 0.6vw);
   font-weight: 300;
   line-height: 2;
   text-align: end;
