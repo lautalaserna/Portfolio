@@ -1,0 +1,43 @@
+.AnimatedTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  column-gap: var(--col-gap);
+}
+
+.row-letter {
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-weight: var(--weight);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  color: var(--font-color);
+}
+
+.AnimatedTitle.WelcomeTitle {
+  --col-gap: 50px;
+  --weight: var(--title-weight);
+  --font-family: var(--title-font);
+  --line-height: 1;
+  --font-size: calc(50px + 3vw);
+  --font-color: var(--font-dark);
+}
+
+.AnimatedTitle.ContactTitle {
+  --col-gap: 30px;
+  --weight: var(--title-weight);
+  --font-family: var(--title-font);
+  --line-height: 1;
+  --font-size: calc(38px + 2vw);
+  --font-color: var(--font-dark);
+  margin-bottom: 10px;
+}
+
+.AnimatedTitle.WelcomeTitle.darkmode {
+  --font-color: var(--font-light);
+}
