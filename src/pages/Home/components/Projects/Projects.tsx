@@ -12,6 +12,10 @@ import mysql from '@/assets/dev-icons/mysql.png'
 import react from '@/assets/dev-icons/react.png'
 import ts from '@/assets/dev-icons/ts.png'
 import spring from '@/assets/dev-icons/springboot.png'
+import bootstrap from '@/assets/dev-icons/bootstrap.png'
+import auth from '@/assets/dev-icons/auth.png'
+import node from '@/assets/dev-icons/node.png'
+import express from '@/assets/dev-icons/express.png'
 
 export interface ProjectsInterface {}
 
@@ -26,7 +30,7 @@ const Projects: React.FC<ProjectsInterface> = () => {
             title="Software Department UNMDP"
             desc="A fully fuctional web page (front-end, back-end, API and database) for the Software Engineering Department of the National University of Mar del Plata. Developed as a project for the university."
             img={projectOne}
-            skillsList={[java, mysql, js, css]}
+            skillsList={[bootstrap, js, spring, mysql]}
             action={() => setSelected(1)}
             selected={selected == 1}
           />
@@ -34,15 +38,15 @@ const Projects: React.FC<ProjectsInterface> = () => {
             title="Branches and Shifts"
             desc="A group project for the university developed mainly in NodeJS. The main objective is the communication between microservices through HTTP requests. It provides access crontrol with Auth0."
             img={projectTwo}
-            skillsList={[js, css, spring,java, mysql, ]}
+            skillsList={[js, node, express, auth]}
             action={() => setSelected(2)}
             selected={selected == 2}
           />
           <ProjectCard
             title="Hangman"
-            desc="lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+            desc="The classic Hangman game. A personal project made as an introduction to ReactJS, React Hooks and Typescript. Implementation of good practices and clean architecture."
             img={projectThree}
-            skillsList={[react, ts, css]}
+            skillsList={[react, js, ts]}
             action={() => setSelected(3)}
             selected={selected == 3}
           />

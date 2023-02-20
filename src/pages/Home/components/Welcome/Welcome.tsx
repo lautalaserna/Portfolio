@@ -26,8 +26,9 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   }
 
   const welcome = {
-    hidden: { x: -1200 },
+    hidden: { opacity: 0, x: -400 },
     show: {
+      opacity: 1,
       x: 0,
       transition: {
         delay: 0.2,
@@ -42,8 +43,9 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   const leftContainer = {
     show: {
       transition: {
-        delayChildren: 1.8,
-        staggerChildren: 0.25,
+        /* delayChildren: 1.8, */
+        delayChildren: 1.4,
+        staggerChildren: 0.4,
       },
     },
   }
@@ -63,15 +65,15 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   return (
     <section className={`Welcome`} id="home">
       <motion.div className="container-left" variants={leftContainer} initial="hidden" animate="show">
-        <motion.h1 className="title" variants={welcome}>
+        {/* <motion.h1 className="title" variants={welcome}>
           Welcome
-        </motion.h1>
-        <div className="name-container">
-          <AnimatedTitle content={"I'm Lautaro Laserna"} style="WelcomeTitle" delay={0.8} />
-          <motion.h4 className="desc" variants={leftItem}>
-            Software engineer & Full stack developer
-          </motion.h4>
-        </div>
+        </motion.h1> */}
+        <AnimatedTitle content={"Welcome"} style="welcome-title" delay={0.2} />
+        <motion.div className="name-container" variants={leftItem}>
+          {/* <AnimatedTitle content={"I'm Lautaro Laserna"} style="WelcomeTitle" delay={0.8} /> */}
+          <motion.h1 className="name" /* variants={leftItem} */>I'm Lautaro Laserna</motion.h1>
+          <motion.h4 className="desc" /* variants={leftItem} */>Software engineer & Full stack developer</motion.h4>
+        </motion.div>
         <motion.div className="btn-container" variants={leftItem}>
           <Button onClick={scrollToProjects} content="See my Work" style="home" />
         </motion.div>

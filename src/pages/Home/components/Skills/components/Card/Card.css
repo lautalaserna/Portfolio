@@ -22,10 +22,11 @@
   width: 100%;
   height: 100%;
   border-radius: var(--b-rad);
-/*   border: solid 4px var(--font-dark); */
+  border-radius: 0 20px 0 20px;
+  /*   border: solid 4px var(--font-dark); */
   background-color: #8641b4;
   background: linear-gradient(-30deg, #8641b4, #ec45d1);
-  box-shadow: -10px -10px 0 #ff83ea;
+  box-shadow: -7px -7px 0 #ff57e3, -14px -14px 0 #ff83ea;
 }
 
 .card-top {
@@ -33,6 +34,7 @@
   height: var(--card-h);
   z-index: 1;
   border-radius: var(--b-rad);
+  border-radius: 0 20px 0 20px;
   background-color: var(--font-light);
   border: solid 4px var(--font-dark);
   z-index: 4;

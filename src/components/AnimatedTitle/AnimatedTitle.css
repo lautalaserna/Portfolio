@@ -24,13 +24,14 @@
   padding: 0;
 }
 
-.AnimatedTitle.Welcome {
-  --col-gap: 0px;
+.AnimatedTitle.welcome-title {
+  --col-gap: 50px;
   --weight: var(--title-weight);
   --font-family: 'Manbow Clear';
-  --line-height: 1;
+  --line-height: 0.95;
   --font-size: 8vw;
   --font-color: var(--font-dark);
+  text-shadow: 5px 0px 0 var(--font-light);
 }
 
 .AnimatedTitle.WelcomeTitle {

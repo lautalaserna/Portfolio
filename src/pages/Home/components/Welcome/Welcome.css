@@ -68,10 +68,17 @@
   color: var(--title-color);
 }
 
+.Welcome .name {
+  margin: 0;
+  text-align: end;
+  font-family: 'Roboto Flex';
+  line-height: 1;
+  font-size: calc(60px + 4vw);
+}
+
 .Welcome .desc {
   margin: 0;
   margin-bottom: 50px;
-  text-align: left;
   font-size: calc(15px + 0.6vw);
   font-weight: 300;
   line-height: 2;

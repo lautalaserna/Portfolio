@@ -15,18 +15,18 @@ const AnimatedTitle: React.FC<AnimatedTitleInterface> = ({ content, darkMode, st
     show: {
       transition: {
         delayChildren: delay,
-        staggerChildren: 0.06,
+        staggerChildren: 0.05,
       },
     },
   }
 
   const letterAnimation = {
-    start: { scale: 0, translateY: 50 },
+    start: { scale: 0, translateY: 80 },
     show: {
       scale: 1,
       translateY: 0,
       transition: {
-        ease: [0.1, 0.4, 0.1, 1.1],
+        ease: [0.3, 1, 0.5, 1.1],
         duration: 0.4,
       },
     },
