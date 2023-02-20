@@ -50,7 +50,6 @@
   --line-height: 1;
   --font-size: calc(38px + 3vw);
   --font-color: var(--font-dark);
-  margin-bottom: 10px;
   font-variation-settings: var(--font-variant-bold);
 }
 

@@ -15,74 +15,55 @@ const About: React.FC<AboutInterface> = () => {
   const { darkMode } = useContext(ThemeContext)
 
   const handleClick = () => {
-    console.log('TODO: Descargar el CV')
+    console.log('Download CV')
   }
 
-  const aboutContainer = {
-    onscreen: {
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  }
-
-  const aboutItem = {
+  const cvContainer = {
     offscreen: {
       opacity: 0,
-      y: 150,
+      translateX: 120,
     },
     onscreen: {
       opacity: 1,
-      y: 0,
+      translateX: 0,
       transition: {
-        ease: [0.6, 0.01, 0.05, 0.95],
-        duration: 0.4,
+        type: 'spring',
+        damping: 15,
+        stiffness: 400,
+        duration: 0.5,
       },
     },
   }
 
   return (
     <section className={`About ${darkMode ? 'darkmode' : ''}`} id="about">
-      <motion.div
-        className="about-container"
-        variants={aboutContainer}
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.5 }}
-      >
+      <div className="about-container">
         <div className="text-container">
-          <motion.h1 className="title" variants={aboutItem}>
-            Who am I.
-          </motion.h1>
-          <motion.p variants={aboutItem}>
+          <motion.h1 className="title">Who am I.</motion.h1>
+          <motion.p>
             Hi, I'm Lauti! A passionate developer from Argentina. I have a strong base in object oriented programming,
             design patterns, software architecture and database management. I'm always looking to learn new skills and
             become a better software engineer as well as a person.
           </motion.p>
-          <motion.p variants={aboutItem}>
+          <motion.p>
             Currently I'm working as a Desktop Java Developer in Disytel Consulting S.A. and I'm finishing my degree as
             a Software Engineer.
           </motion.p>
         </div>
-        <motion.div className="btn-container" variants={aboutItem}>
+        <motion.div
+          className="btn-container"
+          variants={cvContainer}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.6 }}
+        >
           <img src={img} className="image" alt="" />
-{/*           <img
-            className="image"
-            src={img}
-            alt=""
-            onMouseOver={() => {
-              setImg(happyGuy)
-            }}
-            onMouseLeave={() => {
-              setImg(guy)
-            }}
-          /> */}
           <a href={cv} download>
-            <Button onClick={handleClick} content="Download CV" />
+            <Button onClick={handleClick} content="Download CV" style="cv" />
           </a>
         </motion.div>
-      </motion.div>
-      <div className="divider-bottom"></div>
+      </div>
+      {/* <div className="divider-bottom"></div> */}
     </section>
   )
 }

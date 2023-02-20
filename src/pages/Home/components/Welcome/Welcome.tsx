@@ -1,11 +1,11 @@
 import { AnimatedTitle, Button } from '@/components'
-import { ThemeContext } from '@/context'
 import { motion } from 'framer-motion'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import git from './assets/git.png'
 import ig from './assets/ig.png'
 import linkedin from './assets/linkedin.png'
 import { Scroller, SocialIcon } from './components'
+import dots from './assets/dot-pattenr.png'
 import './Welcome.css'
 
 import happyGuy from '../About/assets/lautarito-feliz.png'
@@ -14,15 +14,7 @@ import guy from '../About/assets/lautarito.png'
 export interface WelcomeInterface {}
 
 const Welcome: React.FC<WelcomeInterface> = () => {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext)
   const [img, setImg] = useState(guy)
-  function scrollToBottom() {
-    window.scroll({
-      top: document.body.offsetHeight,
-      left: 0,
-      behavior: 'smooth',
-    })
-  }
 
   function scrollToProjects() {
     const projects = document.getElementById('projects')
@@ -69,7 +61,7 @@ const Welcome: React.FC<WelcomeInterface> = () => {
   }
 
   return (
-    <section className={`Welcome ${darkMode ? 'darkmode' : ''}`} id="home">
+    <section className={`Welcome`} id="home">
       <motion.div className="container-left" variants={leftContainer} initial="hidden" animate="show">
         <motion.h1 className="title" variants={welcome}>
           Welcome
@@ -100,10 +92,11 @@ const Welcome: React.FC<WelcomeInterface> = () => {
           }}
         />
         <motion.div className="social" variants={leftItem}>
-          <SocialIcon icon={linkedin} url={'https://www.linkedin.com/in/lautaro-laserna/'} darkMode={darkMode} />
-          <SocialIcon icon={git} url={'https://github.com/lautalaserna'} darkMode={darkMode} />
-          <SocialIcon icon={ig} url={'https://www.instagram.com/lautalaserna/'} darkMode={darkMode} />
+          <SocialIcon icon={linkedin} url={'https://www.linkedin.com/in/lautaro-laserna/'} />
+          <SocialIcon icon={git} url={'https://github.com/lautalaserna'} />
+          <SocialIcon icon={ig} url={'https://www.instagram.com/lautalaserna/'} />
         </motion.div>
+        {/* <img className='dots-pattern' src={dots} alt="" /> */}
       </div>
     </section>
   )

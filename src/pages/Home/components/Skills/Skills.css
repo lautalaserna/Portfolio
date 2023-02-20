@@ -37,7 +37,7 @@
   align-self: flex-start;
   text-align: start;
   color: var(--font-title);
-  font-size: calc(30px + 1.5vw);
+  font-size: calc(40px + 1.5vw);
   font-family: var(--title-font);
   font-weight: var(--title-weight);
   font-variation-settings: var(--font-variant-bold);

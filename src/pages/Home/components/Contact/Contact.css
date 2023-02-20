@@ -36,7 +36,6 @@
 .Contact .contact-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
   font-size: calc(38px + 2vw);
   font-family: var(--title-font);
   font-weight: var(--title-weight);
@@ -122,7 +121,7 @@
   padding: 10px;
   box-sizing: border-box;
   outline: none;
-  border: solid 2px var(--border-color);
+  border: solid 3px var(--border-color);
   box-shadow: 2px 2px 0 0 var(--border-color);
   border-radius: 12px;
   font-family: 'Poppins', sans-serif;
@@ -137,7 +136,7 @@
   padding: 10px;
   box-sizing: border-box;
   outline: none;
-  border: solid 2px var(--border-color);
+  border: solid 3px var(--border-color);
   box-shadow: 2px 2px 0 0 var(--border-color);
   border-radius: 12px;
   user-select: none;

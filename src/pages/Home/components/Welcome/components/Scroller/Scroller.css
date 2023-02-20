@@ -25,6 +25,22 @@
   }
 }
 
+@keyframes bouce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.Scroller .arrow {
+  animation: bouce 0.8s both infinite;
+}
+
 .Scroller .arrow .arrow-one {
   position: absolute;
   top: 50px;

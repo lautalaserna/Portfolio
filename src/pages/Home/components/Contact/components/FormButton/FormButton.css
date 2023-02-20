@@ -13,9 +13,10 @@
   width: 100%;
   padding: 1em 1.6em;
   box-sizing: border-box;
-  border: 2px solid var(--border-color);
+  border: 3px solid var(--border-color);
   border-radius: 12px;
   background: var(--btn-color);
+  background: linear-gradient(90deg, #b14df3, #f753db);
   color: var(--btn-font);
   font-family: var(--title-font);
   font-size: 25px;

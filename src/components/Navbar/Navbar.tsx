@@ -1,37 +1,49 @@
-import { ThemeContext } from '@/context'
-import { useContext, useEffect, useState } from 'react'
+import { Button } from '@/components'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 import home from './assets/home.png'
-import moon from './assets/moon.png'
 import { Switch } from './components'
-import { Button } from '@/components'
 import './Navbar.css'
 
 export interface NavbarInterface {}
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const [y, setY] = useState(0)
   const [mobile, setMobile] = useState(false)
   const [open, setOpen] = useState(false)
 
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext)
+  const scrollToBottom = () => {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
 
-  const handleScroll = (e: Event) => {
-    if (window.pageYOffset > 1000) {
-      setScroll(true)
+  const handleScroll = () => {
+    if (window.pageYOffset < 400) {
+      setVisible(true)
     } else {
-      setScroll(false)
+      if (y > window.scrollY) {
+        console.log('Scroll UP')
+        setVisible(true)
+      } else if (y < window.scrollY) {
+        console.log('Scroll DOWN')
+        setVisible(false)
+      }
     }
+    setY(window.scrollY)
   }
 
   const handleResize = () => {
     if (window.innerWidth < 900) {
-      setScroll(true)
+      setVisible(true)
       setMobile(true)
     } else {
       setMobile(false)
       setOpen(false)
-      if (window.pageYOffset == 0) setScroll(false)
     }
   }
 
@@ -46,12 +58,23 @@ const Navbar = () => {
     }
   })
 
+  const navMotion = {
+    init: {
+      opacity: 1,
+      y: 0,
+    },
+    action: {
+      opacity: visible ? 1 : 0,
+      y: visible ? 0 : -200,
+    },
+  }
+
   return (
-    <nav className={`Navbar ${scroll ? 'scroll' : ''} ${mobile ? 'mobile' : ''}`}>
+    <motion.nav className={`Navbar ${mobile ? 'mobile' : ''}`} variants={navMotion} initial="init" animate="action">
       <ul className={`nav-menu ${mobile ? 'mobile' : ''} ${open ? 'open' : ''} `}>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
+            className={`nav-link`}
             onClick={() => setOpen(false)}
             to="home"
             smooth={true}
@@ -63,7 +86,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
+            className={`nav-link`}
             onClick={() => setOpen(false)}
             to="about"
             smooth={true}
@@ -73,21 +96,9 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        {/* <li className="nav-item">
-          <Link
-            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
-            onClick={() => setOpen(false)}
-            to="skills"
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Skills
-          </Link>
-        </li> */}
         <li className="nav-item">
           <Link
-            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
+            className={`nav-link`}
             onClick={() => setOpen(false)}
             to="projects"
             smooth={true}
@@ -97,27 +108,14 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
-       {/*  <li className="nav-item">
-          <Link
-            className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
-            onClick={() => setOpen(false)}
-            to="contact"
-            smooth={true}
-            offset={100}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li> */}
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
-        <Switch state={open} onClick={() => setOpen(open => !open)} darkMode={darkMode} icon={home} />
+        <Switch state={open} onClick={() => setOpen(open => !open)} icon={home} />
       </div>
       <div className="nav-switch">
-        <Button content="Contact me" onClick={() => {}} style="nav"/>
-        {/* <Switch state={darkMode} onClick={toggleDarkMode} darkMode={darkMode} icon={moon} /> */}
+        <Button content="Contact me" onClick={scrollToBottom} style="nav" />
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

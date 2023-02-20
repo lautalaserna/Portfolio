@@ -7,6 +7,7 @@
   --name-color: var(--font-dark);
 
   height: 100vh;
+  min-height: 800px;
   box-sizing: border-box;
   align-self: stretch;
   display: flex;
@@ -14,6 +15,7 @@
   justify-content: center;
   align-items: stretch;
   user-select: none;
+  overflow: hidden;
 }
 
 .Welcome.darkmode {
@@ -26,7 +28,7 @@
 .Welcome .container-left {
   width: 60%;
   padding-top: 15vh;
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
   padding-right: 5%;
   position: relative;
   display: flex;
@@ -107,10 +109,11 @@
   border-left: solid var(--page-border) var(--font-dark);
 /*   background-color: var(--bg-color-right); */
   background: linear-gradient(45deg, #ad4dec, #ee6ed9);
+  background: linear-gradient(45deg, #a54ae2, #ff5de4);
 }
 
 .container-right .image {
-  width: 60%;
+  width: 65%;
   min-width: 300px;
 }
 
@@ -124,4 +127,13 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--font-dark);
+}
+
+.Welcome .dots-pattern {
+  position: absolute;
+  right: 0px;
+  bottom: -400px;
+  width: 500px;
+  filter: invert(100%) sepia(0%) saturate(100%);
+  transform: rotate(0deg);
 }

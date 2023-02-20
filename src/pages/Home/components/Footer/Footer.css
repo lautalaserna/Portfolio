@@ -1,0 +1,18 @@
+.Footer {
+  height: 40px;
+  padding: 10px;
+  padding-left: 2vw;
+  box-sizing: border-box;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--font-dark);
+}
+
+.Footer h1 {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--font-light);
+  letter-spacing: 2px;
+}

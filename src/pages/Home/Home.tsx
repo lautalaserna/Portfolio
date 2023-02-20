@@ -1,4 +1,4 @@
-import { About, Projects, Skills, Welcome, Contact} from './components'
+import { About, Projects, Skills, Welcome, Contact, Footer } from './components'
 import { Marquee } from '@/components'
 
 import './Home.css'
@@ -15,6 +15,7 @@ const Home = () => {
       <Marquee content='MY PORTFOLIO' baseVelocity={1.5}/>
       <Projects />
       <Contact />
+      <Footer />
     </div>
   )
 }

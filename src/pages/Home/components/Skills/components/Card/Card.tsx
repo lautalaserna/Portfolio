@@ -52,17 +52,17 @@ const Card: React.FC<CardInterface> = ({ icon, title, desc, skillsList, color, d
 
   const cardBack = {
     offscreen: {
-      rotate: -5,
+      rotate: -6,
     },
     onscreen: {
-      rotate: -5,
+      rotate: -6,
     },
     hovered: {
       y: -20,
-      rotate: -10,
+      rotate: -14,
       transition: {
         type: 'spring',
-        damping: 10,
+        damping: 14,
         stiffness: 600,
         duration: 0.4,
       },
