@@ -1,9 +1,11 @@
+import { AnimatedTitle } from '@/components'
 import { ThemeContext } from '@/context'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import coffee from './assets/coffee.png'
 import database from './assets/database.png'
 import css from './assets/dev-icons/css.png'
 import express from './assets/dev-icons/express.png'
+import git from './assets/dev-icons/git.png'
 import java from './assets/dev-icons/java.png'
 import js from './assets/dev-icons/js.png'
 import mongo from './assets/dev-icons/mongo.png'
@@ -16,6 +18,7 @@ import ts from './assets/dev-icons/ts.png'
 import json from './assets/json.png'
 import tags from './assets/tags.png'
 import { Card } from './components'
+import { motion } from 'framer-motion'
 import './Skills.css'
 
 export interface SkillsInterface {}
@@ -25,27 +28,31 @@ const Skills: React.FC<SkillsInterface> = () => {
 
   return (
     <section className={`Skills ${darkMode ? 'darkmode' : ''}`} id="skills">
-      <div className="skills-text">
-        <h1 className="title">What am I good at?</h1>
-      </div>
-      <div className="cards-container">
-        <div className="card-pair">
+      <div className="skills-container">
+        <motion.h1
+          className="title"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          What am I good at.
+        </motion.h1>
+        <div className="cards-container">
           <Card
             icon={coffee}
             title="Desktop Apps"
             desc="I have a strong base in object oriented programming, desing patterns and good practices using Java as my main lenguaje."
-            skillsList={[java]}
+            skillsList={[java, git]}
             darkMode={darkMode}
           />
           <Card
             icon={tags}
             title="Web Design"
             desc="Currently I have the most fun building responsive websites using React, specially with Typescript, and styling with CSS."
-            skillsList={[react, css, ts]}
+            skillsList={[react, js, ts, css]}
             darkMode={darkMode}
           />
-        </div>
-        <div className="card-pair">
+
           <Card
             icon={json}
             title="REST Services"

@@ -12,6 +12,7 @@ const Home = () => {
       <Marquee content='About Me' baseVelocity={1.5}/>
       <About />
       <Skills />
+      <Marquee content='MY PORTFOLIO' baseVelocity={1.5}/>
       <Projects />
       <Contact />
     </div>

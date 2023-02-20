@@ -1,27 +1,74 @@
 .Projects {
+  padding-top: 60px;
   align-self: stretch;
-  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #9442ca, #e776d4, #8435b9);
+  border-bottom: solid var(--page-border) var(--font-dark);
+}
+
+.main-container {
+  width: 65vw;
+  min-width: 1150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title-container {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--gold);
-  border-top: solid var(--page-border) var(--font-dark);
-  border-bottom: solid var(--page-border) var(--font-dark);
 }
 
-.content {
-  max-width: 800px;
-}
-
-.Projects h1 {
-  margin: 0;
-  font-size: calc(30px + 2vw);
+.title-container .title {
+  margin-bottom: 50px;
   font-family: var(--title-font);
-  font-weight: var(--title-weight);
+  font-size: calc(20px + 2.2vw);
+  text-align: center;
+  font-variation-settings: var(--font-variant-bold);
 }
 
-.Projects p {
+.project-cards {
+  width: 100%;
+  min-width: 350px;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.git-contact {
+  box-sizing: border-box;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  background-color: var(--font-dark);
+}
+
+.footer-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.footer-container .content {
   font-size: 20px;
   font-weight: 400;
 }

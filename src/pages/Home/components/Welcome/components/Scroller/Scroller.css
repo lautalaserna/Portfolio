@@ -1,0 +1,55 @@
+/* .Scroller {
+  position: absolute;
+  left: 150px;
+  bottom: 220px;
+} */
+
+.Scroller .spinner {
+  transform-origin: 0px 90px;
+  animation: rotate 5s linear infinite;
+}
+
+.Scroller span {
+  position: absolute;
+  transform-origin: 0 90px;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Scroller .arrow .arrow-one {
+  position: absolute;
+  top: 50px;
+  left: -5px;
+  width: 10px;
+  height: 80px;
+  background-color: var(--font-dark);
+}
+
+.Scroller .arrow .arrow-two {
+  position: absolute;
+  top: 80px;
+  left: -22px;
+  width: 10px;
+  height: 60px;
+  transform: rotate(-45deg);
+  background-color: var(--font-dark);
+}
+
+.Scroller .arrow .arrow-three {
+  position: absolute;
+  top: 80px;
+  left: 13px;
+  width: 10px;
+  height: 60px;
+  transform: rotate(45deg);
+  background-color: var(--font-dark);
+}

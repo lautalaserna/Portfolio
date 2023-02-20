@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
 
-button {
+.Button {
   /* Variables */
-  --button_radius: 15px;
+  --button_radius: 6px;
   --btn-color: var(--bg-light);
   --btn-border: var(--font-dark);
   --btn-font: var(--font-dark);
@@ -11,48 +11,81 @@ button {
   padding: 0;
   border: none;
   border-radius: var(--button_radius);
-  background: var(--btn-border);
+  background: var(--font-dark);
   font-weight: 600;
   cursor: pointer;
+  transform: translateY(0.3em) translateX(0.3em);
 }
 
-button.darkmode {
+.Button.darkmode {
   --btn-color: var(--bg-light);
   --btn-border: var(--font-dark);
   --btn-font: var(--font-dark);
 }
 
+.Button.project {
+  --button_radius: 8px;
+  background: var(--pink);
+}
+
+.Button.nav {
+  --button_radius: 1px;
+  background: linear-gradient(45deg, #b05fe6, #ee6ed9);
+}
+
+.Button.home {
+  --button_radius: 12px;
+  background: var(--font-dark);
+}
+
+
 .button_top {
   padding: 15px 30px;
   display: block;
   box-sizing: border-box;
-  border: 2px solid var(--btn-border);
+  border: 3px solid var(--btn-border);
   border-radius: var(--button_radius);
   background: var(--btn-color);
   color: var(--btn-font);
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   font-size: calc(15px + 0.2vw);
   user-select: none;
-  transform: translateY(-0.5em);
+  transform: translateY(-0.3em) translateX(-0.3em);
   transition: transform 0.1s ease;
 }
 
-button:hover .button_top {
- transform: translateY(-0.33em);
+.Button.project .button_top {
+  padding: 12px 12px;
+  font-weight: 500;
+  font-size: calc(16px);
+  border: 2px solid var(--font-dark);
+  background-color: var(--font-dark);
+  color: var(--font-light);
 }
 
-button:active .button_top {
+.Button.nav .button_top {
+  padding: 10px 25px;
+  font-weight: 400;
+  font-size: calc(15px + 0.2vw);
+  border: 2px solid var(--font-dark);
+  background-color: var(--font-dark);
+  color: var(--font-light);
+}
+
+.Button.home .button_top {
+  padding: 16px 35px;
+  font-weight: 600;
+  font-size: calc(20px + 0.2vw);
+  border: 3px solid var(--font-dark);
+  background: linear-gradient(45deg, #b05fe6, #ee6ed9);
+  color: var(--font-light);
+}
+
+.Button:hover .button_top {
+ transform: translateY(-0.2em) translateX(-0.2em);
+}
+
+.Button:active .button_top {
  transform: translateY(0);
-}
-
-.blue .button_top {
-  background-color: var(--blue);
-}
-
-.orange .button_top {
-  background-color: var(--orange);
-}
-
-.gold .button_top {
-  background-color: var(--gold);
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   column-gap: var(--col-gap);
 }
@@ -19,23 +19,50 @@
   color: var(--font-color);
 }
 
+.AnimatedTitle .word {
+  margin: 0;
+  padding: 0;
+}
+
+.AnimatedTitle.Welcome {
+  --col-gap: 0px;
+  --weight: var(--title-weight);
+  --font-family: 'Manbow Clear';
+  --line-height: 1;
+  --font-size: 8vw;
+  --font-color: var(--font-dark);
+}
+
 .AnimatedTitle.WelcomeTitle {
   --col-gap: 50px;
   --weight: var(--title-weight);
   --font-family: var(--title-font);
-  --line-height: 1;
-  --font-size: calc(50px + 3vw);
+  --line-height: 0.95;
+  --font-size: calc(60px + 4vw);
   --font-color: var(--font-dark);
+  text-shadow: 5px 0px 0 var(--font-light);
 }
 
 .AnimatedTitle.ContactTitle {
-  --col-gap: 30px;
+  --col-gap: 35px;
   --weight: var(--title-weight);
   --font-family: var(--title-font);
   --line-height: 1;
-  --font-size: calc(38px + 2vw);
+  --font-size: calc(38px + 3vw);
   --font-color: var(--font-dark);
   margin-bottom: 10px;
+  font-variation-settings: var(--font-variant-bold);
+}
+
+.AnimatedTitle.SkillsTitle {
+  --col-gap: 16px;
+  --weight: var(--title-weight);
+  --font-family: var(--title-font);
+  --line-height: 1;
+  --font-size: calc(30px + 1.5vw);
+  --font-color: var(--font-dark);
+  margin-bottom: 40px;
+  justify-content: flex-start;
 }
 
 .AnimatedTitle.WelcomeTitle.darkmode {

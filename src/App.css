@@ -10,20 +10,72 @@
   src: url('./assets/fonts/manbow-clear.ttf');
 }
 
+@font-face {
+  font-family: 'Monument';
+  src: url('./assets/fonts/monument-extended.otf');
+}
+
+@font-face {
+  font-family: 'Monument Bold';
+  src: url('./assets/fonts/monument-extended-bold.otf');
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('./assets/fonts/RobotoFlex.ttf');
+}
+
 :root {
   --orange: #f5724f;
-  --organge: tomato;
   --blue: #375bff;
   --blue: #a49df8;
   --gold: #fabf53;
+  --pink: #f096e8;
   --bg-light: #f8f8f8;
   --bg-dark: #303338;
   --font-light: #f8f8f8;
   --font-dark: #101010;
 
+  --title-font: 'Monument';
   --title-font: 'Manbow Solid';
+  --title-font: 'Roboto Flex';
   --title-weight: 600;
-  --page-border: 3px;
+  --page-border: 4px;
+  --font-variant-normal:
+    'wght' 400, 
+    'wdth' 120, 
+    'slnt' 0, 
+    'YTAS' 777, 
+    'XTRA' 700, 
+    'YTDE' -200, 
+    'GRAD' 150, 
+    'YTLC' 570,
+    'YOPQ' 150, 
+    'YTUC' 760;
+
+  --font-variant-bold:  
+    'wght' 700, 
+    'wdth' 120, 
+    'slnt' 0, 
+    'YTAS' 777, 
+    'XTRA' 700, 
+    'YTDE' -200, 
+    'GRAD' 100, 
+    'YTLC' 570,
+    'YOPQ' 150, 
+    'YTUC' 760;
+
+  --font-variant-extra-bold:  
+    'wght' 900, 
+    'wdth' 120, 
+    'slnt' 0, 
+    'YTAS' 777, 
+    'XTRA' 700, 
+    'YTDE' -200, 
+    'GRAD' 100, 
+    'YTLC' 570,
+    'YOPQ' 150, 
+    'YTUC' 760;
 }
 
 body {
@@ -32,4 +84,6 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   border: solid var(--page-border) var(--font-dark);
+  background-color: var(--bg-light);
+  font-variation-settings: var(--font-variant-normal);
 }

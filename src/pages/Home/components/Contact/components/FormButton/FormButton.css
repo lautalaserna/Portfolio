@@ -11,17 +11,16 @@
 
 .form-button .button_top {
   width: 100%;
-  padding: 0.8em 1.6em;
+  padding: 1em 1.6em;
   box-sizing: border-box;
   border: 2px solid var(--border-color);
   border-radius: 12px;
   background: var(--btn-color);
   color: var(--btn-font);
+  font-family: var(--title-font);
   font-size: 25px;
   font-weight: 600;
   line-height: 0.3;
-  letter-spacing: 3px;
-  font-family: var(--title-font), sans-serif;
   user-select: none;
   cursor: pointer;
   transform: translateY(-0.5em);

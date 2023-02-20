@@ -13,7 +13,6 @@
 }
 
 .parallax .scroller {
-
   font-size: 64px;
   display: flex;
   white-space: nowrap;
@@ -29,9 +28,9 @@
 .parallax .item {
   padding: 0;
   margin: 0;
+  font-family: 'Manbow Solid';
   font-size: calc(30px + 4vw);
   font-weight: var(--title-weight);
-  font-family: var(--title-font);
   color: var(--font-dark);
 }
 

@@ -21,53 +21,69 @@
   --font-desc: var(--orange);
 }
 
-.Skills .skills-text {
-  margin-left: 10%;
-  margin-bottom: 50px;
-  align-self: stretch;
+.Skills .skills-container {
+  width: 70%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .Skills .title {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
-  color: var(--font-title);
-  font-size: calc(30px + 1.5vw);  
+  margin-bottom: 100px;
+  align-self: flex-start;
   text-align: start;
+  color: var(--font-title);
+  font-size: calc(30px + 1.5vw);
   font-family: var(--title-font);
   font-weight: var(--title-weight);
-}
-
-.Skills .desc {
-  margin: 0;
-  padding-bottom: 20px;
-  font-weight: 300;
-  font-size: calc(15px + 0.5vw);
-  color: var(--font-desc);
+  font-variation-settings: var(--font-variant-bold);
 }
 
 .cards-container {
-  max-width: 1600px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  column-gap: 5vw;
+  display: grid;
+  column-gap: 60px;
   row-gap: 60px;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 'one two three four';
+}
+
+.cards-container:nth-child(1) {
+  grid-area: one;
+}
+
+.cards-container:nth-child(2) {
+  grid-area: two;
+}
+
+.cards-container:nth-child(3) {
+  grid-area: three;
+}
+
+.cards-container:nth-child(4) {
+  grid-area: four;
 }
 
 .card-pair {
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  column-gap: 5vw;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  row-gap: 60px;
+}
+
+@media (max-width: 1457px) {
+  .cards-container {
+    grid-template-areas: 'one two' 'three four';
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-container {
+    grid-template-areas: 'one' 'two' 'three' 'four';
+  }
 }

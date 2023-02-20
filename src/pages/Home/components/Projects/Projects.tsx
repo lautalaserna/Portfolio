@@ -1,6 +1,22 @@
 import { ThemeContext } from '@/context'
 import React, { useContext } from 'react'
+import { Button } from '@/components'
+import { motion } from 'framer-motion'
+import { ProjectCard, GitButton } from './components'
 import './Projects.css'
+import imageOne from './assets/TEST.png'
+import imageTwo from './assets/main-project.jpg'
+import imageThree from './assets/TEST3.png'
+
+import css from '@/assets/dev-icons/css.png'
+import express from '@/assets/dev-icons/express.png'
+import git from '@/assets/dev-icons/git.png'
+import java from '@/assets/dev-icons/java.png'
+import js from '@/assets/dev-icons/js.png'
+import mysql from '@/assets/dev-icons/mysql.png'
+import node from '@/assets/dev-icons/node.png'
+import react from '@/assets/dev-icons/react.png'
+import ts from '@/assets/dev-icons/ts.png'
 
 export interface ProjectsInterface {}
 
@@ -9,19 +25,35 @@ const Projects: React.FC<ProjectsInterface> = () => {
 
   return (
     <section className={`Projects ${darkMode ? 'darkmode' : ''}`} id="projects">
-      <div className="content"></div>
-      <h1>Check out my Projects</h1>
-      <p className="content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio consequatur tenetur culpa, doloremque
-        similique asperiores nam blanditiis. Iste magnam delectus placeat dicta et id labore at, cupiditate excepturi
-        nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur iste dolore blanditiis, autem
-        vel, nulla voluptatem asperiores optio tempora deleniti in eum, eos delectus doloribus hic adipisci fugiat
-        inventore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, quo temporibus assumenda voluptate
-        tempore accusantium! Hic ut iure totam vel natus dignissimos eius odio voluptatum? Reprehenderit recusandae
-        quaerat ex tempore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem qui voluptatibus ipsa omnis?
-        Sit explicabo adipisci alias tenetur culpa! Provident beatae illo alias incidunt totam, est nobis corrupti earum
-        facere!
-      </p>
+      <div className="main-container">
+{/*         <div className="title-container">
+          <h1 className="title">Check out my Projects</h1>
+        </div> */}
+        <div className="project-cards">
+          <ProjectCard
+            title="Software Department UNMDP"
+            desc="lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+            img={imageOne}
+            skillsList={[java, mysql, js, css]}
+          />
+          <ProjectCard
+            title="Branches and Shifts"
+            desc="lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+            img={imageTwo}
+            skillsList={[java, mysql, js, css]}
+          />
+          <ProjectCard
+            title="Hangman"
+            desc="lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+            img={imageThree}
+            skillsList={[react, ts, css]}
+          />
+        </div>
+        <div className="footer-container">
+          <h1 className="content">Check out more of my projects on my Github</h1>
+          <GitButton/>
+        </div>
+      </div>
     </section>
   )
 }

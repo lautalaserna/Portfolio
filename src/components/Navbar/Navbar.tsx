@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import home from './assets/home.png'
 import moon from './assets/moon.png'
 import { Switch } from './components'
+import { Button } from '@/components'
 import './Navbar.css'
 
 export interface NavbarInterface {}
@@ -16,7 +17,7 @@ const Navbar = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext)
 
   const handleScroll = (e: Event) => {
-    if (window.pageYOffset > 40) {
+    if (window.pageYOffset > 1000) {
       setScroll(true)
     } else {
       setScroll(false)
@@ -72,7 +73,7 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
@@ -83,7 +84,7 @@ const Navbar = () => {
           >
             Skills
           </Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link
             className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
@@ -96,24 +97,25 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
-        <li className="nav-item">
+       {/*  <li className="nav-item">
           <Link
             className={`nav-link ${scroll || darkMode ? 'scroll' : ''}`}
             onClick={() => setOpen(false)}
             to="contact"
             smooth={true}
-            offset={-100}
+            offset={100}
             duration={500}
           >
             Contact
           </Link>
-        </li>
+        </li> */}
       </ul>
       <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
         <Switch state={open} onClick={() => setOpen(open => !open)} darkMode={darkMode} icon={home} />
       </div>
       <div className="nav-switch">
-        <Switch state={darkMode} onClick={toggleDarkMode} darkMode={darkMode} icon={moon} />
+        <Button content="Contact me" onClick={() => {}} style="nav"/>
+        {/* <Switch state={darkMode} onClick={toggleDarkMode} darkMode={darkMode} icon={moon} /> */}
       </div>
     </nav>
   )

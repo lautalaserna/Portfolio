@@ -1,0 +1,114 @@
+.card {
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-light);
+  border: 3px solid black;
+  border-radius: 8px;
+  box-shadow: 6px 6px var(--font-dark);
+  transition: all 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  flex: 20;
+}
+
+.card .card-title {
+  min-width: 400px;
+  text-align: center;
+  font-family: 'Roboto Flex';
+  font-size: 20px;
+  transform: rotate(90deg);
+  font-variation-settings: var(--font-variant-extra-bold);
+}
+
+.card .card-open {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-open .card-content {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+}
+  
+
+.card .card-img {
+  width: 50%;
+  min-width: 350px;
+  border: solid 3px var(--font-dark);
+  border-radius: 1px;
+  box-shadow: -10px -10px var(--gold);
+}
+
+.card-open .card-content .content-title {
+  margin: 0;
+  font-family: 'Roboto Flex';
+  text-align: start;
+  font-size: 25px;
+  font-variation-settings: var(--font-variant-bold);
+}
+
+.card-open .card-content .content-desc {
+  margin: 0;
+  font-weight: 400;
+  text-align: start;
+  font-size: 15px;
+}
+
+.card-open .card-content .content-tools {
+  margin: 0;
+  font-family: 'Roboto Flex';
+  text-align: start;
+  font-size: 20px;
+  font-variation-settings: var(--font-variant-bold);
+}
+
+.card-open .card-content .content-skills {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.card-open .card-content .content-skills .skill-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-lihght);
+  border: solid 2px var(--font-dark);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 var(--blue);
+}
+
+.card-open .card-content .content-skills .skill-icon {
+  width: 30px;
+}
+
+.card-open .card-content .content-btns {
+  align-self: stretch;
+  position: absolute;
+  bottom: -80px;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 15px;
+}
