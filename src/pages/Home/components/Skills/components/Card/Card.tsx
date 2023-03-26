@@ -7,11 +7,9 @@ export interface CardInterface {
   title: string
   desc: string
   skillsList: string[]
-  color?: string
-  darkMode?: boolean
 }
 
-const Card: React.FC<CardInterface> = ({ icon, title, desc, skillsList, color, darkMode }) => {
+const Card: React.FC<CardInterface> = ({ icon, title, desc, skillsList }) => {
   const card = {
     offscreen: {
       opacity: 0,
@@ -69,24 +67,9 @@ const Card: React.FC<CardInterface> = ({ icon, title, desc, skillsList, color, d
     },
   }
 
-  const skillIcon = {
-    offscreen: {
-      scale: 0,
-    },
-    onscreen: {
-      scale: 1,
-      transition: {
-        type: 'spring',
-        damping: 12,
-        stiffness: 300,
-        duration: 0.4,
-      },
-    },
-  }
-
   return (
     <motion.div
-      className={`Card ${darkMode ? 'darkmode' : ''}`}
+      className={`Card`}
       variants={card}
       initial="offscreen"
       whileInView="onscreen"
@@ -103,7 +86,7 @@ const Card: React.FC<CardInterface> = ({ icon, title, desc, skillsList, color, d
           <h4 className="card-desc">{desc}</h4>
           <div className="card-footer">
             {skillsList.map(path => (
-              <motion.div className="footer-image-container"/*  variants={skillIcon} */>
+              <motion.div key={path} className="footer-image-container">
                 <img className="footer-icon" src={path} alt="" />
               </motion.div>
             ))}

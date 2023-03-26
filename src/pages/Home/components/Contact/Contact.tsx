@@ -1,16 +1,13 @@
-import { ThemeContext } from '@/context'
-import fly from './assets/flying-lauti.png'
-import React, { useContext } from 'react'
 import { AnimatedTitle } from '@/components'
+import { motion } from 'framer-motion'
+import React from 'react'
+import fly from './assets/flying-lauti.png'
 import { FormButton } from './components'
-import { motion, useAnimation } from 'framer-motion'
 import './Contact.css'
 
 export interface ContactInterface {}
 
 const Contact: React.FC<ContactInterface> = () => {
-  const { darkMode } = useContext(ThemeContext)
-
   const contactForm = {
     offscreen: {
       y: 400,
@@ -48,7 +45,7 @@ const Contact: React.FC<ContactInterface> = () => {
   }
 
   return (
-    <section className={`Contact ${darkMode ? 'darkmode' : ''}`} id="contact">
+    <section className={`Contact`} id="contact">
       <motion.img
         className="contact-img swing"
         src={fly}
@@ -85,7 +82,7 @@ const Contact: React.FC<ContactInterface> = () => {
           </div>
         </div>
         <textarea className="form-textarea" placeholder="What's up?" required />
-        <FormButton content="Get in Touch"/>
+        <FormButton content="Get in Touch" />
       </motion.form>
     </section>
   )

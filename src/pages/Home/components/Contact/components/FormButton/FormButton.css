@@ -1,10 +1,9 @@
 .form-button {
   width: 100%;
   padding: 0;
-  font-weight: 600;
   border: none;
   border-radius: 12px;
-  background: var(--border-color);
+  background: var(--font-dark);
   font-size: calc(15px + 0.2vw);
   cursor: pointer;
 }
@@ -13,17 +12,17 @@
   width: 100%;
   padding: 1em 1.6em;
   box-sizing: border-box;
-  border: 3px solid var(--border-color);
+  border: 3px solid var(--font-dark);
   border-radius: 12px;
-  background: var(--btn-color);
   background: linear-gradient(90deg, #b14df3, #f753db);
-  color: var(--btn-font);
-  font-family: var(--title-font);
+  color: var(--font-dark);
   font-size: 25px;
-  font-weight: 600;
+  font-family: 'Roboto Flex';
+  font-variation-settings: var(--font-variant-normal);
   line-height: 0.3;
   user-select: none;
   cursor: pointer;
+  font-family: var(--title-font);
   transform: translateY(-0.5em);
   transition: transform 0.1s ease;
 }

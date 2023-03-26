@@ -1,0 +1,35 @@
+.Burger {
+  --rotation: 45deg;
+  height: 30px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Burger .line {
+  width: 100%;
+  height: 5px;
+  opacity: 1;
+  background-color: var(--font-dark);
+  transition: 300ms ease-in-out;
+}
+
+.Burger.cheked .line.line-one {
+  transform: translateX(5px) translateY(-2px) rotate(var(--rotation));
+  transform-origin: center left;
+  transform-style: preserve-3D;
+}
+
+.Burger.cheked .line.line-two {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.Burger.cheked .line.line-three {
+  transform: translateX(5px) translateY(2px) rotate(calc(var(--rotation) * -1));
+  transform-origin: center left;
+  transform-style: preserve-3D;
+}

@@ -1,24 +1,11 @@
 .Skills {
-  /* Variables */
-  --bg-skills: var(--bg-light);
-  --font-title: var(--font-dark);
-  --font-desc: var(--orange);
-
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding-top: 60px;
+  padding-bottom: 140px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--bg-skills);
-}
-
-.Skills.darkmode {
-  /* Darkmode Variables */
-  --bg-skills: var(--bg-dark);
-  --font-title: var(--font-light);
-  --font-desc: var(--orange);
 }
 
 .Skills .skills-container {
@@ -36,17 +23,15 @@
   margin-bottom: 100px;
   align-self: flex-start;
   text-align: start;
-  color: var(--font-title);
   font-size: calc(40px + 1.5vw);
   font-family: var(--title-font);
-  font-weight: var(--title-weight);
   font-variation-settings: var(--font-variant-bold);
 }
 
 .cards-container {
   display: grid;
-  column-gap: 60px;
-  row-gap: 60px;
+  column-gap: 65px;
+  row-gap: 65px;
   grid-auto-columns: 1fr;
   grid-template-areas: 'one two three four';
 }

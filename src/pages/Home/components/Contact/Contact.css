@@ -1,36 +1,14 @@
 .Contact {
-  /* Variables */
-  --bg-contact: var(--bg-light);
-  --bg-form: var(--bg-light);
-  --title-color: var(--font-dark);
-  --input-title-color: var(--bg-dark);
-  --border-color: var(--font-dark);
-  --font-contact: var(--font-dark);
-  --btn-color: var(--blue);
-  --btn-font: var(--font-dark);
-
-  height: 100vh;
-  padding-top: 6vh;
+  height: 95vh;
+  padding-top: 3vh;
   box-sizing: border-box;
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-contact);
+  background-color: var(--bg-light);
   overflow: hidden;
-}
-
-.Contact.darkmode {
-  /* Darkmode Variables */
-  --bg-contact: var(--bg-dark);
-  --bg-form: var(--bg-light );
-  --title-color: var(--font-light);
-  --input-title-color: var(--bg-dark);
-  --border-color: var(--font-dark);
-  --font-contact: var(--font-dark);
-  --btn-color: var(--blue);
-  --btn-font: var(--font-light);
 }
 
 .Contact .contact-title {
@@ -39,7 +17,7 @@
   font-size: calc(38px + 2vw);
   font-family: var(--title-font);
   font-weight: var(--title-weight);
-  color: var(--title-color);
+  color: var(--font-dark);
 }
 
 .Contact .contact-img {
@@ -63,7 +41,7 @@
   border: solid var(--page-border) var(--font-dark);
   border-bottom: none;
   border-radius: 30px 30px 0px 0px;
-  background: var(--bg-form);
+  background: var(--bg-light);
 }
 
 .Contact .form-inputs {
@@ -110,7 +88,7 @@
 .input-title {
   margin-left: 10px;
   margin-top: 10px;
-  color: var(--input-title-color);
+  color: var(--font-dark);
   user-select: none;
 }
 
@@ -121,12 +99,12 @@
   padding: 10px;
   box-sizing: border-box;
   outline: none;
-  border: solid 3px var(--border-color);
-  box-shadow: 2px 2px 0 0 var(--border-color);
+  border: solid 3px var(--font-dark);
+  box-shadow: 2px 2px 0 0 var(--font-dark);
   border-radius: 12px;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  color: var(--font-contact);
+  color: var(--font-dark);
 }
 
 .Contact .form-textarea {
@@ -136,12 +114,12 @@
   padding: 10px;
   box-sizing: border-box;
   outline: none;
-  border: solid 3px var(--border-color);
-  box-shadow: 2px 2px 0 0 var(--border-color);
+  border: solid 3px var(--font-dark);
+  box-shadow: 2px 2px 0 0 var(--font-dark);
   border-radius: 12px;
   user-select: none;
   resize: none;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  color: var(--font-contact);
+  color: var(--font-dark);
 }

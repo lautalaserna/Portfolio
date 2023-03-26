@@ -1,15 +1,9 @@
 .Navbar {
-  /* Varibles */
-  --nav-color: var(--bg-light);
-  --nav-mobile-color: var(--font-dark);
-  --nav-font: var(--font-dark);
-  --nav-mobile-font: var(--font-light);
-  --nav-border: var(--font-dark);
-
   height: 30px;
   padding: 30px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 10;
   position: fixed;
   top: 20px;
   left: 30px;
@@ -20,46 +14,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--nav-color);
-  border: solid 4px var(--nav-border);
-}
-
-.Navbar.mobile {
-  padding-left: 40px;
-  padding-right: 40px;
+  background-color: var(--bg-light);
+  border: solid 4px var(--font-dark);
 }
 
 .nav-menu {
   padding-left: 0;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: calc(25px + 2vw);
+  grid-gap: calc(40px + 2vw);
   list-style: none;
 }
 
 .nav-menu.mobile {
-  width: 220px;
-  height: 90vh;
+  width: 300px;
+  height: 340px;
   padding: 0;
   margin: 0;
-  padding-top: 10vh;
+  padding-top: 50px;
   position: absolute;
-  bottom: -100vh;
+  opacity: 0;
+  z-index: -1;
+  top: 120px;
   left: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--nav-mobile-color);
+  background-color: var(--bg-light);
+  border: solid 4px var(--font-dark);
+  border-radius: 20px;
+  box-shadow: 2px 6px var(--font-dark);
   transition: all 300ms ease-in-out;
 }
 
 .nav-menu.mobile .nav-link {
-  color: var(--nav-mobile-font);
+  color: var(--font-dark);
 }
 
 .nav-menu.mobile.open {
   left: 0;
+  opacity: 1;
   transition: all 300ms ease-in-out;
 }
 
@@ -76,7 +71,7 @@
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
-  color: var(--nav-font);
+  color: var(--font-dark);
   cursor: pointer;
 }
 
@@ -108,4 +103,23 @@
 
 .hidden {
   display: none;
+}
+
+.Navbar .nav-name {
+  user-select: none;
+  font-size: 35px;
+  letter-spacing: -1px;
+  font-family: 'Roboto Flex';
+  font-variation-settings: var(--font-variant-normal);
+}
+
+.Navbar .nav-name span {
+  user-select: none;
+  font-size: 36px;
+  color: #4f0694;
+  text-shadow: 
+    -3px 3px #9e33c9,
+    -6px 6px #da6fe6;
+  font-family: 'Roboto Flex';
+  font-variation-settings: var(--font-variant-bold);
 }

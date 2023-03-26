@@ -26,13 +26,13 @@
 }
 
 :root {
-  --orange: #f5724f;
+/*   --orange: #f5724f;
   --blue: #375bff;
   --blue: #a49df8;
   --gold: #fabf53;
-  --pink: #f096e8;
+  --pink: #f096e8; */
+  --gold: #fabf53;
   --bg-light: #f8f8f8;
-  --bg-dark: #101010;
   --font-light: #f8f8f8;
   --font-dark: #101010;
 

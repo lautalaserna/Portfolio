@@ -1,9 +1,3 @@
-/* .Scroller {
-  position: absolute;
-  left: 150px;
-  bottom: 220px;
-} */
-
 .Scroller .spinner {
   transform-origin: 0px 90px;
   animation: rotate 5s linear infinite;
@@ -68,4 +62,43 @@
   height: 60px;
   transform: rotate(45deg);
   background-color: var(--font-dark);
+}
+
+@media (max-width: 900px) {
+  .Scroller .spinner {
+    transform-origin: 0px 70px;
+  }
+
+  .Scroller span {
+    transform-origin: 0 70px;
+  }
+
+  .Scroller .arrow .arrow-one {
+    position: absolute;
+    top: 46px;
+    left: -5px;
+    width: 10px;
+    height: 52px;
+    background-color: var(--font-dark);
+  }
+  
+  .Scroller .arrow .arrow-two {
+    position: absolute;
+    top: 70px;
+    left: -16px;
+    width: 10px;
+    height: 40px;
+    transform: rotate(-45deg);
+    background-color: var(--font-dark);
+  }
+  
+  .Scroller .arrow .arrow-three {
+    position: absolute;
+    top: 70px;
+    left: 6px;
+    width: 10px;
+    height: 40px;
+    transform: rotate(45deg);
+    background-color: var(--font-dark);
+  }
 }

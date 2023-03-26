@@ -1,13 +1,7 @@
 .Card {
-  /* Variables */
   --b-rad: 20px;
   --card-w: 270px;
   --card-h: 340px;
-  --icon-bg: var(--gold);
-  --icon-color: var(--font-dark);
-  --card-border: var(--font-dark);
-  --card-title: var(--font-dark);
-
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -23,7 +17,6 @@
   height: 100%;
   border-radius: var(--b-rad);
   border-radius: 0 20px 0 20px;
-  /*   border: solid 4px var(--font-dark); */
   background-color: #8641b4;
   background: linear-gradient(-30deg, #8641b4, #ec45d1);
   box-shadow: -7px -7px 0 #ff57e3, -14px -14px 0 #ff83ea;
@@ -50,10 +43,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--icon-bg);
-  border: solid 3px var(--icon-color);
+  background-color: var(--gold);
+  border: solid 3px var(--font-dark);
   border-radius: 50%;
-  box-shadow: 1px 4px 0 0 var(--card-border);
+  box-shadow: 1px 4px 0 0 var(--font-dark);
 }
 
 .card-icon {
@@ -79,8 +72,7 @@
   font-size: 26px;
   font-weight: 400;
   font-family: 'Roboto Flex';
-  color: var(--card-title);
-  border-bottom: solid 2px var(--card-border);
+  border-bottom: solid 2px var(--font-dark);
 }
 
 .card-content .card-desc {
@@ -105,7 +97,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-lihght);
   border: solid 2px var(--font-dark);
   border-radius: 10px;
   box-shadow: 4px 4px 0 0 #be77f8;

@@ -1,11 +1,4 @@
 .Welcome {
-  /* Variables */
-  --bg-color-left: var(--bg-light);
-  --bg-color-right: var(--blue);
-  --title-color: var(--font-dark);
-  --desc-color: var(--font-dark);
-  --name-color: var(--font-dark);
-
   height: 100vh;
   min-height: 800px;
   box-sizing: border-box;
@@ -18,13 +11,6 @@
   overflow: hidden;
 }
 
-.Welcome.darkmode {
-  /* Darkmode Variables */
-  --bg-color-right: var(--bg-dark);
-  --desc-color: var(--font-light);
-  --name-color: var(--font-light);
-}
-
 .Welcome .container-left {
   width: 60%;
   padding-top: 15vh;
@@ -35,7 +21,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-evenly;
-  background-color: var(--bg-color-left);
+  background-color: var(--bg-light);
 }
 
 @media (max-width: 900px) {
@@ -45,27 +31,14 @@
 
   .Welcome .container-left {
     width: 100%;
-    justify-content: space-evenly;
+    padding-bottom: 15vh;
+    background: linear-gradient(0deg, #fff, #fff, #ff5de4, #a54ae2);
   }
 
-  .Welcome .container-left .title {
-    font-family: 'Manbow Clear';
-    font-size: 14vw;
+  .Welcome .container-left .scroller-container {
+    left: 25%;
+    bottom: 20%;
   }
-
-  .Welcome .container-left .scroller-container{
-    display: none;
-  }
-}
-
-.Welcome .title {
-  margin: 0;
-  text-align: end;
-  font-weight: var(--title-weight);
-  font-family: 'Manbow Clear';
-  line-height: 1.4;
-  font-size: 8vw;
-  color: var(--title-color);
 }
 
 .Welcome .name {
@@ -83,7 +56,7 @@
   font-weight: 300;
   line-height: 2;
   text-align: end;
-  color: var(--desc-color);
+  color: var(--font-dark);
 }
 
 .Welcome .social-container {
@@ -101,7 +74,7 @@
 
 .Welcome .scroller-container {
   position: absolute;
-  left: 150px;
+  left: 140px;
   bottom: 240px;
 }
 
@@ -114,14 +87,13 @@
   align-items: center;
   justify-content: center;
   border-left: solid var(--page-border) var(--font-dark);
-/*   background-color: var(--bg-color-right); */
-  background: linear-gradient(45deg, #ad4dec, #ee6ed9);
   background: linear-gradient(45deg, #a54ae2, #ff5de4);
 }
 
 .container-right .image {
   width: 65%;
   min-width: 300px;
+  cursor: pointer;
 }
 
 .container-right .social {

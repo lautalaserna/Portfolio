@@ -9,10 +9,6 @@
   transform: scale(1.1);
 }
 
-.SocialIcon .icon{
+.SocialIcon .icon {
   width: calc(15px + 0.8vw);
-}
-
-.SocialIcon.darkmode .icon{
-  filter: invert(100%) sepia(0%) saturate(100%);
 }

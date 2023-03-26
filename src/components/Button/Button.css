@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
 
 .Button {
-  /* Variables */
   --button_radius: 6px;
-  --btn-color: var(--bg-light);
-  --btn-border: var(--font-dark);
-  --btn-font: var(--font-dark);
-
   max-width: 300px;
   padding: 0;
   border: none;
@@ -15,12 +10,6 @@
   font-weight: 600;
   cursor: pointer;
   transform: translateY(0.3em) translateX(0.3em);
-}
-
-.Button.darkmode {
-  --btn-color: var(--bg-light);
-  --btn-border: var(--font-dark);
-  --btn-font: var(--font-dark);
 }
 
 .Button.project {
@@ -47,10 +36,10 @@
   padding: 15px 30px;
   display: block;
   box-sizing: border-box;
-  border: 3px solid var(--btn-border);
+  border: 3px solid var(--font-dark);
   border-radius: var(--button_radius);
-  background: var(--btn-color);
-  color: var(--btn-font);
+  background: var(--bg-light);
+  color: var(--font-dark);
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: calc(15px + 0.2vw);
@@ -71,18 +60,18 @@
 .Button.nav .button_top {
   padding: 10px 25px;
   font-weight: 400;
-  font-size: calc(15px + 0.2vw);
+  font-size: calc(16px + 0.2vw);
   border: 2px solid var(--font-dark);
   background-color: var(--font-dark);
   color: var(--font-light);
 }
 
 .Button.home .button_top {
-  padding: 16px 35px;
+  padding: 14px 35px;
   font-weight: 500;
-  font-size: calc(20px + 0.2vw);
+  font-size: calc(18px + 0.4vw);
   border: 3px solid var(--font-dark);
-  background: linear-gradient(45deg, #b05fe6, #ee6ed9);
+  background: linear-gradient(45deg, #a346e0, #ee6ed9);
   color: var(--font-light);
 }
 

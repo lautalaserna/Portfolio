@@ -3,13 +3,12 @@ import './SocialIcon.css'
 
 export interface SocialIconInterface {
   icon: string
-  darkMode?: boolean
-  url:string
+  url: string
 }
 
-const SocialIcon: React.FC<SocialIconInterface> = ({ icon, darkMode, url }) => {
+const SocialIcon: React.FC<SocialIconInterface> = ({ icon, url }) => {
   return (
-    <a className={`SocialIcon ${darkMode ? 'darkmode' : ''}`} href={url} target="_blank" >
+    <a className={`SocialIcon`} href={url} target="_blank">
       <img className="icon" src={icon} alt="" />
     </a>
   )

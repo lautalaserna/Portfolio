@@ -1,18 +1,14 @@
 import { Button } from '@/components'
-import { ThemeContext } from '@/context'
 import { motion } from 'framer-motion'
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import './About.css'
-import happyGuy from './assets/lautarito-feliz.png'
-import guy from './assets/lautarito.png'
-import cv from './assets/Lautaro Laserna.pdf'
 import imgCV from './assets/cv.png'
+import cv from './assets/Lautaro Laserna.pdf'
 
 export interface AboutInterface {}
 
 const About: React.FC<AboutInterface> = () => {
   const [img, setImg] = useState(imgCV)
-  const { darkMode } = useContext(ThemeContext)
 
   const handleClick = () => {
     console.log('Download CV')
@@ -36,7 +32,7 @@ const About: React.FC<AboutInterface> = () => {
   }
 
   return (
-    <section className={`About ${darkMode ? 'darkmode' : ''}`} id="about">
+    <section className={`About`} id="about">
       <div className="about-container">
         <div className="text-container">
           <motion.h1 className="title">Who am I.</motion.h1>
@@ -63,7 +59,6 @@ const About: React.FC<AboutInterface> = () => {
           </a>
         </motion.div>
       </div>
-      {/* <div className="divider-bottom"></div> */}
     </section>
   )
 }

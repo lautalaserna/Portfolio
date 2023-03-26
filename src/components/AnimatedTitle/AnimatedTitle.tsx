@@ -21,24 +21,26 @@ const AnimatedTitle: React.FC<AnimatedTitleInterface> = ({ content, darkMode, st
   }
 
   const letterAnimation = {
-    start: { scale: 0, translateY: 80 },
+    start: { scale:0.5, opacity: 0, translateX: 100 },
     show: {
-      scale: 1,
-      translateY: 0,
+      scale:1,
+      opacity: 1,
+      translateX: 0,
       transition: {
-        ease: [0.3, 1, 0.5, 1.1],
-        duration: 0.4,
+        type: 'tween',
+        ease: 'backInOut',
+        duration: 0.5,
       },
     },
   }
 
   return (
     <motion.span
-      className={`AnimatedTitle ${darkMode ? 'darkmode' : ''}  ${style}`}
+      className={`AnimatedTitle ${style}`}
       variants={titleContainer}
       initial="start"
       whileInView="show"
-      viewport={{ once: once , amount: 0.5 }}
+      viewport={{ once: once, amount: 0.5 }}
     >
       {content.split(' ').map(word => (
         <motion.span className="word">

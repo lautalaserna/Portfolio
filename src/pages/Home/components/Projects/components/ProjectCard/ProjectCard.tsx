@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { animate, motion, useAnimation } from 'framer-motion'
 import { Button } from '@/components'
+import { motion, useAnimation } from 'framer-motion'
+import React, { useEffect } from 'react'
 import './ProjectCard.css'
 
 export interface ProjectCardInterface {
@@ -36,7 +36,6 @@ const ProjectCard: React.FC<ProjectCardInterface> = ({ selected, img, title, des
         <div className="card-content">
           <h1 className="content-title">{title}</h1>
           <h4 className="content-desc">{desc}</h4>
-          <h1 className="content-tools">Tools</h1>
           <div className="content-skills">
             {skillsList.map(path => (
               <motion.div className="skill-container">

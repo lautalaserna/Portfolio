@@ -2,8 +2,7 @@ import { Button } from '@/components'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
-import home from './assets/home.png'
-import { Switch } from './components'
+import { Burger } from './components'
 import './Navbar.css'
 
 export interface NavbarInterface {}
@@ -23,7 +22,7 @@ const Navbar = () => {
   }
 
   const handleScroll = () => {
-    if (window.pageYOffset < 400) {
+    if (window.pageYOffset < 800) {
       setVisible(true)
     } else {
       if (y > window.scrollY) {
@@ -61,7 +60,7 @@ const Navbar = () => {
   const navMotion = {
     init: {
       opacity: 1,
-      y: 0,
+      y: -100,
     },
     action: {
       opacity: visible ? 1 : 0,
@@ -71,6 +70,10 @@ const Navbar = () => {
 
   return (
     <motion.nav className={`Navbar ${mobile ? 'mobile' : ''}`} variants={navMotion} initial="init" animate="action">
+      <div className="nav-name">
+        <span>L</span>
+        auti
+      </div>
       <ul className={`nav-menu ${mobile ? 'mobile' : ''} ${open ? 'open' : ''} `}>
         <li className="nav-item">
           <Link
@@ -108,12 +111,15 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
+        <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
+          <Button content="Contact me" onClick={scrollToBottom} style="nav" />
+        </div>
       </ul>
-      <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
-        <Switch state={open} onClick={() => setOpen(open => !open)} icon={home} />
-      </div>
-      <div className="nav-switch">
+      <div className={`nav-switch ${!mobile ? 'visible' : 'hidden'}`}>
         <Button content="Contact me" onClick={scrollToBottom} style="nav" />
+      </div>
+      <div className={`nav-switch ${mobile ? 'visible' : 'hidden'}`}>
+        <Burger state={open} onClick={() => setOpen(open => !open)} />
       </div>
     </motion.nav>
   )
