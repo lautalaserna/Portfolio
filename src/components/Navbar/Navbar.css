@@ -31,6 +31,7 @@
   height: 340px;
   padding: 0;
   margin: 0;
+  grid-gap: calc(20px + 2vw);
   padding-top: 50px;
   position: absolute;
   opacity: 0;
