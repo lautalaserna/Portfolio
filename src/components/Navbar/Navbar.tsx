@@ -93,7 +93,7 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             to="about"
             smooth={true}
-            offset={-100}
+            offset={-200}
             duration={500}
           >
             About
@@ -105,7 +105,7 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             to="projects"
             smooth={true}
-            offset={-100}
+            offset={-150}
             duration={500}
           >
             Projects

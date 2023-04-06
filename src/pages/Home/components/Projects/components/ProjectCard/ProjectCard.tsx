@@ -8,11 +8,12 @@ export interface ProjectCardInterface {
   img: string
   title: string
   desc: string
+  repoURL: string
   skillsList: string[]
   action: () => void
 }
 
-const ProjectCard: React.FC<ProjectCardInterface> = ({ selected, img, title, desc, skillsList, action }) => {
+const ProjectCard: React.FC<ProjectCardInterface> = ({ selected, img, title, desc, skillsList, repoURL, action }) => {
   const titleMotion = useAnimation()
   const contentMotion = useAnimation()
 
@@ -45,7 +46,9 @@ const ProjectCard: React.FC<ProjectCardInterface> = ({ selected, img, title, des
           </div>
           <div className="content-btns">
             <Button content="Preview" onClick={() => {}} style="project" />
-            <Button content="Repositorie" onClick={() => {}} style="project" />
+            <a href={repoURL} target="_blank">
+              <Button content="Repositorie" onClick={() => {}} style="project" />
+            </a>
           </div>
         </div>
       </motion.div>

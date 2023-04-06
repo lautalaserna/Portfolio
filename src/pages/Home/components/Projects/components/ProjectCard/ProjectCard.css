@@ -54,7 +54,7 @@
   min-width: 370px;
   user-select: none;
   border: solid 3px var(--font-dark);
-  border-radius: 20px 0px 20px 0px;
+/*   border-radius: 20px 0px 20px 0px; */
   box-shadow: -5px -5px #8e29ec, -10px -10px #ae36e6, -15px -15px #ee59da;
 }
 

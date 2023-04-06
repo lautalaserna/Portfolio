@@ -123,3 +123,40 @@
   font-size: 15px;
   color: var(--font-dark);
 }
+
+.form-button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: var(--font-dark);
+  font-size: calc(15px + 0.2vw);
+  cursor: pointer;
+}
+
+.form-button .button_top {
+  width: 100%;
+  padding: 1em 1.6em;
+  box-sizing: border-box;
+  border: 3px solid var(--font-dark);
+  border-radius: 12px;
+  background: linear-gradient(90deg, #b14df3, #f753db);
+  color: var(--font-dark);
+  font-size: 25px;
+  font-family: 'Roboto Flex';
+  font-variation-settings: var(--font-variant-normal);
+  line-height: 0.3;
+  user-select: none;
+  cursor: pointer;
+  font-family: var(--title-font);
+  transform: translateY(-0.5em);
+  transition: transform 0.1s ease;
+}
+
+.form-button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.form-button:active .button_top {
+  transform: translateY(0);
+}
